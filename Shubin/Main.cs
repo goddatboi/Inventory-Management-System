@@ -12,15 +12,9 @@ namespace Shubin
 {
     public partial class Main : Form
     {
-        DataBaseConnection dataBase = new DataBaseConnection();
         public Main()
         {
             InitializeComponent();
-        }
-
-        private void Main_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
