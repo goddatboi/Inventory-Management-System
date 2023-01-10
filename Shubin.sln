@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shubin", "Shubin\Shubin.csproj", "{5B6A10E7-2491-466B-8837-01949ECAD70F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B6A10E7-2491-466B-8837-01949ECAD70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6A10E7-2491-466B-8837-01949ECAD70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6A10E7-2491-466B-8837-01949ECAD70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6A10E7-2491-466B-8837-01949ECAD70F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {629F877C-80E5-4BEF-B033-86995AE7D156}
+	EndGlobalSection
+EndGlobal
