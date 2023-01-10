@@ -51,7 +51,7 @@ namespace Shubin
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select ID, Login, Password from Workers where Login = '{loginUser}' and Password = '{passwordUser}'";
+            string querystring = $"select ID, Login, Password from RegUsers where Login = '{loginUser}' and Password = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
