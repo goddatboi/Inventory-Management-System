@@ -23,6 +23,9 @@ namespace Shubin
     public partial class Main : Form
     {
         DataBaseConnection dataBase = new DataBaseConnection();
+
+        int selectedRow;
+
         public Main()
         {
             InitializeComponent();
@@ -68,6 +71,25 @@ namespace Shubin
         {
             CreateColumns();
             RefreshDataGridView(dataGridView1);
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selectedRow = e.RowIndex;
+
+            if (e.RowIndex >= 0) 
+            {
+                DataGridViewRow row = dataGridView1.Rows[selectedRow];
+                
+                textBox_ID.Text = row.Cells[0].Value.ToString();
+                textBox_Name.Text = row.Cells[1].Value.ToString();
+                textBox_Model.Text = row.Cells[2].Value.ToString();
+                textBox_SerialNumber.Text = row.Cells[3].Value.ToString();
+                textBox_Location.Text = row.Cells[4].Value.ToString();
+                textBox_PurchaseDate.Text = row.Cells[5].Value.ToString();
+                textBox_Status.Text = row.Cells[6].Value.ToString();
+            }
+
         }
     }
 }
