@@ -43,10 +43,11 @@
             this.textBox_Model = new System.Windows.Forms.TextBox();
             this.textBox_SerialNumber = new System.Windows.Forms.TextBox();
             this.textBox_Location = new System.Windows.Forms.TextBox();
-            this.textBox_PurchaseDate = new System.Windows.Forms.TextBox();
             this.textBox_Status = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker_PurchaseDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,6 +155,7 @@
             this.createButton.TabIndex = 18;
             this.createButton.Text = "Новая запись";
             this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // textBox_Name
             // 
@@ -191,15 +193,6 @@
             this.textBox_Location.Size = new System.Drawing.Size(229, 24);
             this.textBox_Location.TabIndex = 39;
             // 
-            // textBox_PurchaseDate
-            // 
-            this.textBox_PurchaseDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_PurchaseDate.Location = new System.Drawing.Point(175, 518);
-            this.textBox_PurchaseDate.Multiline = true;
-            this.textBox_PurchaseDate.Name = "textBox_PurchaseDate";
-            this.textBox_PurchaseDate.Size = new System.Drawing.Size(229, 24);
-            this.textBox_PurchaseDate.TabIndex = 40;
-            // 
             // textBox_Status
             // 
             this.textBox_Status.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -231,15 +224,33 @@
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(506, 429);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Update";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dateTimePicker_PurchaseDate
+            // 
+            this.dateTimePicker_PurchaseDate.Location = new System.Drawing.Point(175, 523);
+            this.dateTimePicker_PurchaseDate.Name = "dateTimePicker_PurchaseDate";
+            this.dateTimePicker_PurchaseDate.Size = new System.Drawing.Size(229, 20);
+            this.dateTimePicker_PurchaseDate.TabIndex = 56;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 587);
+            this.Controls.Add(this.dateTimePicker_PurchaseDate);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.ID);
             this.Controls.Add(this.textBox_Status);
-            this.Controls.Add(this.textBox_PurchaseDate);
             this.Controls.Add(this.textBox_Location);
             this.Controls.Add(this.textBox_SerialNumber);
             this.Controls.Add(this.textBox_Model);
@@ -281,9 +292,10 @@
         private System.Windows.Forms.TextBox textBox_Model;
         private System.Windows.Forms.TextBox textBox_SerialNumber;
         private System.Windows.Forms.TextBox textBox_Location;
-        private System.Windows.Forms.TextBox textBox_PurchaseDate;
         private System.Windows.Forms.TextBox textBox_Status;
         private System.Windows.Forms.Label ID;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_PurchaseDate;
     }
 }

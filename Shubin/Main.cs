@@ -29,6 +29,7 @@ namespace Shubin
         public Main()
         {
             InitializeComponent();
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void CreateColumns()
@@ -86,10 +87,49 @@ namespace Shubin
                 textBox_Model.Text = row.Cells[2].Value.ToString();
                 textBox_SerialNumber.Text = row.Cells[3].Value.ToString();
                 textBox_Location.Text = row.Cells[4].Value.ToString();
-                textBox_PurchaseDate.Text = row.Cells[5].Value.ToString();
+                dateTimePicker_PurchaseDate.Text = row.Cells[5].Value.ToString();
                 textBox_Status.Text = row.Cells[6].Value.ToString();
             }
 
+        }
+
+        private void createButton_Click(object sender, EventArgs e)
+        {
+            //Add_Inventory Add_Inv = new Add_Inventory();
+            //Add_Inv.Show();
+
+            var name = textBox_Name.Text;
+            var model = textBox_Model.Text;
+            var serialnum = textBox_SerialNumber.Text;
+            var location = textBox_Location.Text;
+            var purchasedate = dateTimePicker_PurchaseDate.Value;
+            var status = textBox_Status.Text;
+
+            try
+            {
+                dataBase.openConnection();
+                var addQuery = $"insert into InventoryItems (Name, Model, SerialNumber, Location, PurchaseDate, Status) values ('{name}','{model}','{serialnum}','{location}','{purchasedate}','{status}')";
+                var command = new SqlCommand(addQuery, dataBase.getConnection());
+                int rowsAffected = command.ExecuteNonQuery();
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Запись успешно добавлена!");
+                    RefreshDataGridView(dataGridView1);
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                dataBase.closeConnection();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridView(dataGridView1);
         }
     }
 }
