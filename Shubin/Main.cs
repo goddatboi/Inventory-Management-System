@@ -44,6 +44,16 @@ namespace Shubin
             dataGridView1.Columns.Add("IsNew", string.Empty);
         }
 
+        private void ClearFields()
+        {
+            textBox_ID.Text = "";
+            textBox_Name.Text = "";
+            textBox_Model.Text = "";
+            textBox_SerialNumber.Text = "";
+            textBox_Location.Text = "";
+            textBox_Status.Text = "";
+        }
+
         private void ReadSingleRow(DataGridView DGW, IDataRecord record)
         {
             DGW.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetDateTime(5), record.GetString(6), RowState.ModifiedNew);
@@ -124,15 +134,107 @@ namespace Shubin
                     var command = new SqlCommand(deleteQuery, dataBase.getConnection());
                     command.ExecuteNonQuery();
                 }
+
+                if (rowState == RowState.Modified)
+                {
+                    var id = dataGridView1.Rows[index].Cells[0].Value.ToString();
+                    var name = dataGridView1.Rows[index].Cells[1].Value.ToString();
+                    var model = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                    var serialnum = dataGridView1.Rows[index].Cells[3].Value.ToString();
+                    var location = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                    var purchasedate = dataGridView1.Rows[index].Cells[5].Value.ToString();
+                    var status = dataGridView1.Rows[index].Cells[6].Value.ToString();
+
+                    var changeQuery = $"update InventoryItems set Name = '{name}', Model = '{model}', SerialNumber = '{serialnum}', Location = '{location}', PurchaseDate = '{purchasedate}', Status = '{status}' where id = '{id}'";
+
+                    var command = new SqlCommand(changeQuery, dataBase.getConnection());
+                    command.ExecuteNonQuery();
+                }
             }
 
             dataBase.closeConnection();
+        }
+
+        private void Change()
+        {
+            var selectedRowIndex = dataGridView1.CurrentCell.RowIndex;
+
+            var id = textBox_ID.Text;
+            var name = textBox_Name.Text;
+            var model = textBox_Model.Text;
+            var serialnum = textBox_SerialNumber.Text;
+            var location = textBox_Location.Text;
+            var purchasedate = dateTimePicker_PurchaseDate.Value;
+            var status = textBox_Status.Text;
+
+            //Validation for ID
+            if (string.IsNullOrEmpty(id))
+            {
+                MessageBox.Show("ID cannot be empty!");
+                return;
+            }
+
+            int result;
+            if (!int.TryParse(id, out result))
+            {
+                MessageBox.Show("ID must be a number!");
+                return;
+            }
+
+            //Validation for Name
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Name cannot be empty!");
+                return;
+            }
+
+            //Validation for Model
+            if (string.IsNullOrEmpty(model))
+            {
+                MessageBox.Show("Model cannot be empty!");
+                return;
+            }
+
+            //Validation for Serial Number
+            if (string.IsNullOrEmpty(serialnum))
+            {
+                MessageBox.Show("Serial Number cannot be empty!");
+                return;
+            }
+
+            //Validation for Location
+            if (string.IsNullOrEmpty(location))
+            {
+                MessageBox.Show("Location cannot be empty!");
+                return;
+            }
+
+            //Validation for Status
+            if (string.IsNullOrEmpty(status))
+            {
+                MessageBox.Show("Status cannot be empty!");
+                return;
+            }
+
+            //Validation for Purchase Date
+            if (purchasedate > DateTime.Now)
+            {
+                MessageBox.Show("Purchase date must be in the past!");
+                return;
+            }
+
+            if (dataGridView1.Rows[selectedRowIndex].Cells[0].Value.ToString() != string.Empty)
+            {
+                dataGridView1.Rows[selectedRowIndex].SetValues(id, name, model, serialnum, location, purchasedate, status);
+                dataGridView1.Rows[selectedRowIndex].Cells[7].Value = RowState.Modified;
+            }
         }
 
         private void Main_Load(object sender, EventArgs e)
         {
             CreateColumns();
             RefreshDataGridView(dataGridView1);
+            dataGridView1.Columns["IsNew"].Visible = false;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -191,6 +293,7 @@ namespace Shubin
         private void button1_Click(object sender, EventArgs e)
         {
             RefreshDataGridView(dataGridView1);
+            ClearFields();
         }
 
         private void textBox_Search_TextChanged(object sender, EventArgs e)
@@ -201,11 +304,18 @@ namespace Shubin
         private void deleteButton_Click(object sender, EventArgs e)
         {
             deleteRow();
+            ClearFields();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
         {
             Update();
+        }
+
+        private void changeButton_Click(object sender, EventArgs e)
+        {
+            Change();
+            ClearFields();
         }
     }
 }

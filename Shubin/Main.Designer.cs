@@ -149,6 +149,7 @@
             this.changeButton.TabIndex = 19;
             this.changeButton.Text = "Изменить";
             this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.Click += new System.EventHandler(this.changeButton_Click);
             // 
             // createButton
             // 
