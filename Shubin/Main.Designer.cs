@@ -48,6 +48,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker_PurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.textBox_Search = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -241,11 +242,22 @@
             this.dateTimePicker_PurchaseDate.Size = new System.Drawing.Size(229, 20);
             this.dateTimePicker_PurchaseDate.TabIndex = 56;
             // 
+            // textBox_Search
+            // 
+            this.textBox_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox_Search.Location = new System.Drawing.Point(692, 28);
+            this.textBox_Search.Multiline = true;
+            this.textBox_Search.Name = "textBox_Search";
+            this.textBox_Search.Size = new System.Drawing.Size(229, 24);
+            this.textBox_Search.TabIndex = 57;
+            this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(961, 587);
+            this.Controls.Add(this.textBox_Search);
             this.Controls.Add(this.dateTimePicker_PurchaseDate);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -297,5 +309,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker_PurchaseDate;
+        private System.Windows.Forms.TextBox textBox_Search;
     }
 }

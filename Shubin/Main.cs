@@ -68,6 +68,26 @@ namespace Shubin
 
         }
 
+        private void Search(DataGridView DGW)
+        {
+            DGW.Rows.Clear();
+
+            string searchString = $"select * from InventoryItems where concat (ID, Name, Model, SerialNumber, Location, PurchaseDate, Status) like '%" + textBox_Search.Text + "%'";
+
+            SqlCommand command = new SqlCommand(searchString, dataBase.getConnection());
+
+            dataBase.openConnection();  
+
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                ReadSingleRow(DGW, reader);
+            }
+
+            reader.Close();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             CreateColumns();
@@ -130,6 +150,11 @@ namespace Shubin
         private void button1_Click(object sender, EventArgs e)
         {
             RefreshDataGridView(dataGridView1);
+        }
+
+        private void textBox_Search_TextChanged(object sender, EventArgs e)
+        {
+            Search(dataGridView1);
         }
     }
 }
