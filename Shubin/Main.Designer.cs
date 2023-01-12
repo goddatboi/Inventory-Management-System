@@ -129,6 +129,7 @@
             this.saveButton.TabIndex = 21;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // deleteButton
             // 
@@ -138,6 +139,7 @@
             this.deleteButton.TabIndex = 20;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // changeButton
             // 

@@ -88,6 +88,47 @@ namespace Shubin
             reader.Close();
         }
 
+        private void deleteRow()
+        {
+            int index = dataGridView1.CurrentCell.RowIndex;
+
+            dataGridView1.Rows[index].Visible= false;
+
+            if (dataGridView1.Rows[index].Cells[0].Value.ToString() == string.Empty)
+            {
+                dataGridView1.Rows[index].Cells[7].Value = RowState.Deleted;
+                return;
+            }
+
+            dataGridView1.Rows[index].Cells[7].Value = RowState.Deleted;
+        }
+
+        private void Update()
+        {
+            dataBase.openConnection();
+
+            for (int index = 0; index < dataGridView1.Rows.Count; index++)
+            {
+                var rowState = (RowState)dataGridView1.Rows[index].Cells[7].Value;
+
+                if (rowState == RowState.Existed)
+                {
+                    continue;
+                }
+
+                if (rowState == RowState.Deleted)
+                {
+                    var id = Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value);
+                    var deleteQuery = $"delete from InventoryItems where ID = {id}";
+
+                    var command = new SqlCommand(deleteQuery, dataBase.getConnection());
+                    command.ExecuteNonQuery();
+                }
+            }
+
+            dataBase.closeConnection();
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             CreateColumns();
@@ -155,6 +196,16 @@ namespace Shubin
         private void textBox_Search_TextChanged(object sender, EventArgs e)
         {
             Search(dataGridView1);
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            deleteRow();
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            Update();
         }
     }
 }
