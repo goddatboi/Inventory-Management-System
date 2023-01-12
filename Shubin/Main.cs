@@ -113,7 +113,7 @@ namespace Shubin
             dataGridView1.Rows[index].Cells[7].Value = RowState.Deleted;
         }
 
-        private void Update()
+        private void dbUpdate()
         {
             dataBase.openConnection();
 
@@ -235,6 +235,7 @@ namespace Shubin
             CreateColumns();
             RefreshDataGridView(dataGridView1);
             dataGridView1.Columns["IsNew"].Visible = false;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -309,7 +310,7 @@ namespace Shubin
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            Update();
+            dbUpdate();
         }
 
         private void changeButton_Click(object sender, EventArgs e)
