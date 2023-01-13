@@ -58,6 +58,7 @@
     <Compile Include="Admin_Panel.Designer.cs">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="checkUserAccess.cs" />
     <Compile Include="DataBaseConnection.cs" />
     <Compile Include="Log_In.cs">
       <SubType>Form</SubType>

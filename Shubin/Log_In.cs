@@ -60,6 +60,8 @@ namespace Shubin
 
             if (table.Rows.Count == 1)
             {
+                var user = new checkUserAccess(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
+
                 MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Main mainForm = new Main();
                 this.Hide();
