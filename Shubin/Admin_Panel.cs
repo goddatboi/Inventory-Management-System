@@ -24,8 +24,8 @@ namespace Shubin
         private void CreateColumns()
         {
             dataGridView1.Columns.Add("ID", "ID");
-            dataGridView1.Columns.Add("Login", "Логин");
-            dataGridView1.Columns.Add("Password", "Пароль");
+            dataGridView1.Columns.Add("Login_User", "Логин");
+            dataGridView1.Columns.Add("Password_User", "Пароль");
             var checkColumn = new DataGridViewCheckBoxColumn();
             checkColumn.HeaderText= "IsAdmin";
             dataGridView1.Columns.Add(checkColumn);

@@ -254,7 +254,7 @@
             // textBox_Search
             // 
             this.textBox_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox_Search.Location = new System.Drawing.Point(692, 28);
+            this.textBox_Search.Location = new System.Drawing.Point(415, 377);
             this.textBox_Search.Multiline = true;
             this.textBox_Search.Name = "textBox_Search";
             this.textBox_Search.Size = new System.Drawing.Size(229, 24);

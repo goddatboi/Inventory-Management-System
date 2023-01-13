@@ -46,13 +46,14 @@ namespace Shubin
             var loginUser = Login_Reg.Text;
             var passwordUser = Password_Reg.Text;
 
-            string querystring = $"insert into RegUsers(Login, Password, Is_Admin) values ('{loginUser}', '{passwordUser}', 0)";
+            string querystring = $"insert into RegUsers(Login_User, Password_User, Is_Admin) values ('{loginUser}', '{passwordUser}', 0)";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
             dataBase.openConnection();
+            int rowsAffected = command.ExecuteNonQuery();
 
-            if (command.ExecuteNonQuery() == 1)
+            if (rowsAffected > 0)
             {
                 MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Log_In loginForm = new Log_In();
@@ -72,7 +73,7 @@ namespace Shubin
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string querystring = $"select ID, Login, Password, Is_Admin from RegUsers where Login = '{loginUser}' and Password = '{passwordUser}'";
+            string querystring = $"select ID, Login_User, Password_User, Is_Admin from RegUsers where Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
