@@ -76,7 +76,7 @@ namespace Shubin
 
             dataBase.openConnection();
 
-            SqlDataReader reader= command.ExecuteReader();
+            SqlDataReader reader = command.ExecuteReader();
 
             while (reader.Read()) 
             {
@@ -328,6 +328,14 @@ namespace Shubin
         {
             Change();
             ClearFields();
+        }
+
+        private void управлениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admin_Panel adminForm = new Admin_Panel();
+            this.Hide();
+            adminForm.ShowDialog();
+            this.Show();
         }
     }
 }

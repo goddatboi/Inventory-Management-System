@@ -77,8 +77,9 @@ namespace Shubin
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Sign_Up registerForm = new Sign_Up();
-            registerForm.Show();
             this.Hide();
+            registerForm.ShowDialog();
+            this.Show();
         }
     }
 }
