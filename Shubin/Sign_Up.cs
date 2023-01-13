@@ -90,5 +90,16 @@ namespace Shubin
                 return false;
             }
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Login_Reg.Text = "";
+            Password_Reg.Text = "";
+        }
+
+        private void registerButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

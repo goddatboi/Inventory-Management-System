@@ -73,7 +73,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Admin_Panel";
-            this.Text = "Панель администратора";
+            this.Text = "InventoryPro";
             this.Load += new System.EventHandler(this.Admin_Panel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

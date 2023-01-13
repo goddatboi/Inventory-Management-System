@@ -81,5 +81,11 @@ namespace Shubin
             registerForm.ShowDialog();
             this.Show();
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Login_Log.Text = "";
+            Password_Log.Text = "";
+        }
     }
 }

@@ -42,6 +42,7 @@ namespace Shubin
 
         private void CreateColumns()
         {
+            //Таблица InventoryItems
             dataGridView1.Columns.Add("ID", "ID");
             dataGridView1.Columns.Add("Name", "Наименование");
             dataGridView1.Columns.Add("Model", "Модель");
@@ -50,6 +51,13 @@ namespace Shubin
             dataGridView1.Columns.Add("PurchaseDate", "Дата покупки");
             dataGridView1.Columns.Add("Status", "Состояние");
             dataGridView1.Columns.Add("IsNew", string.Empty);
+
+            //Таблица InventoryChanges
+            dataGridView2.Columns.Add("ID", "ID");
+            dataGridView2.Columns.Add("Inv_item_ID", "Идентификатор предмета");
+            dataGridView2.Columns.Add("Change_date", "Дата изменения");
+            dataGridView2.Columns.Add("Change_type", "Тип изменения");
+            dataGridView2.Columns.Add("IsNew", string.Empty);
         }
 
         private void ClearFields()
@@ -336,6 +344,17 @@ namespace Shubin
             this.Hide();
             adminForm.ShowDialog();
             this.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            RefreshDataGridView(dataGridView1);
+            ClearFields();
         }
     }
 }
