@@ -22,14 +22,22 @@ namespace Shubin
 
     public partial class Main : Form
     {
+        private readonly checkUserAccess _user;
+
         DataBaseConnection dataBase = new DataBaseConnection();
 
         int selectedRow;
 
-        public Main()
+        public Main(checkUserAccess user)
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
+            _user = user;
+        }
+
+        private void isAdmin()
+        {
+            управлениеToolStripMenuItem.Enabled = _user.IsAdmin;
         }
 
         private void CreateColumns()
@@ -232,10 +240,13 @@ namespace Shubin
 
         private void Main_Load(object sender, EventArgs e)
         {
+            toolStripUserStatus.Text = $"{_user.Login}: {_user.Status}";
+            isAdmin();
             CreateColumns();
             RefreshDataGridView(dataGridView1);
             dataGridView1.Columns["IsNew"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

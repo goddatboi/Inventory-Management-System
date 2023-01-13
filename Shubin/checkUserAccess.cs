@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shubin
 {
-    internal class checkUserAccess
+    public class checkUserAccess
     {
         public string Login { get; set; }
 
