@@ -346,14 +346,13 @@ namespace Shubin
             this.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void updateButton_Click(object sender, EventArgs e)
         {
-            ClearFields();
+            dbUpdate();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void clearButton_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView(dataGridView1);
             ClearFields();
         }
     }

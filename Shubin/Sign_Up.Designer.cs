@@ -34,11 +34,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Password_Reg = new System.Windows.Forms.TextBox();
             this.Login_Reg = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.registerButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -89,26 +87,6 @@
             this.Login_Reg.Size = new System.Drawing.Size(181, 28);
             this.Login_Reg.TabIndex = 61;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Shubin.Properties.Resources.icons8_add_user_male_70;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 11);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(75, 73);
-            this.pictureBox3.TabIndex = 70;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Shubin.Properties.Resources.icons8_broom_50;
-            this.pictureBox2.Location = new System.Drawing.Point(280, 11);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox2.TabIndex = 69;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
             // registerButton
             // 
             this.registerButton.BackColor = System.Drawing.Color.White;
@@ -124,13 +102,21 @@
             this.registerButton.UseVisualStyleBackColor = false;
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Shubin.Properties.Resources.icons8_add_user_male_70;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 74);
+            this.pictureBox1.TabIndex = 69;
+            this.pictureBox1.TabStop = false;
+            // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(355, 305);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
@@ -141,21 +127,19 @@
             this.Name = "Sign_Up";
             this.Text = "InventoryPro";
             this.Load += new System.EventHandler(this.Sign_Up_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox Password_Reg;
         private System.Windows.Forms.TextBox Login_Reg;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

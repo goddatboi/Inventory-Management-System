@@ -119,22 +119,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-search-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-update-left-rotation-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-note-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-broom-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-user-70.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-add-user-male-70.png" />
+    <None Include="Resources\icons8-administrator-male-70.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

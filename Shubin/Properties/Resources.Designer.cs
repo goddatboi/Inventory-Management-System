@@ -63,16 +63,6 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_add_user_male_100 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-add-user-male-100", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_user_male_70 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-user-male-70", resourceCulture);
@@ -83,9 +73,9 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_broom_30 {
+        internal static System.Drawing.Bitmap icons8_administrator_male_70 {
             get {
-                object obj = ResourceManager.GetObject("icons8-broom-30", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-administrator-male-70", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +83,9 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_broom_50 {
+        internal static System.Drawing.Bitmap icons8_broom_30 {
             get {
-                object obj = ResourceManager.GetObject("icons8-broom-50", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-broom-30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,26 +106,6 @@ namespace Shubin.Properties {
         internal static System.Drawing.Bitmap icons8_search_20 {
             get {
                 object obj = ResourceManager.GetObject("icons8-search-20", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_30 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-search-30", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_search_50 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-search-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

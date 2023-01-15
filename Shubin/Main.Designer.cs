@@ -57,31 +57,29 @@
             this.toolStripUserStatus = new System.Windows.Forms.ToolStripTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.updateButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -197,7 +195,7 @@
             this.createButton.Name = "createButton";
             this.createButton.Size = new System.Drawing.Size(117, 46);
             this.createButton.TabIndex = 18;
-            this.createButton.Text = "Новая запись";
+            this.createButton.Text = "Добавить запись";
             this.createButton.UseVisualStyleBackColor = true;
             this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
@@ -330,6 +328,7 @@
             // 
             this.toolStripUserStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.toolStripUserStatus.Name = "toolStripUserStatus";
+            this.toolStripUserStatus.ReadOnly = true;
             this.toolStripUserStatus.Size = new System.Drawing.Size(100, 25);
             // 
             // tabControl1
@@ -347,11 +346,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.updateButton);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Controls.Add(this.pictureBox3);
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Controls.Add(this.textBox_Search);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -362,13 +361,55 @@
             this.tabPage1.Text = "Инвентарь";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // updateButton
+            // 
+            this.updateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateButton.Image = global::Shubin.Properties.Resources.icons8_update_left_rotation_30;
+            this.updateButton.Location = new System.Drawing.Point(6, 6);
+            this.updateButton.Name = "updateButton";
+            this.updateButton.Size = new System.Drawing.Size(39, 37);
+            this.updateButton.TabIndex = 66;
+            this.updateButton.UseVisualStyleBackColor = true;
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Shubin.Properties.Resources.icons8_search_20;
+            this.pictureBox1.Location = new System.Drawing.Point(50, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(579, 325);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(155, 17);
+            this.label8.TabIndex = 64;
+            this.label8.Text = "Управление записями";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.changeButton);
+            this.groupBox2.Controls.Add(this.saveButton);
+            this.groupBox2.Controls.Add(this.deleteButton);
+            this.groupBox2.Controls.Add(this.createButton);
+            this.groupBox2.Location = new System.Drawing.Point(591, 345);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(129, 225);
+            this.groupBox2.TabIndex = 63;
+            this.groupBox2.TabStop = false;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.clearButton);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.textBox_Name);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox_Model);
             this.groupBox1.Controls.Add(this.label5);
@@ -388,13 +429,42 @@
             this.groupBox1.TabIndex = 62;
             this.groupBox1.TabStop = false;
             // 
+            // clearButton
+            // 
+            this.clearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearButton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
+            this.clearButton.Location = new System.Drawing.Point(503, 16);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(46, 46);
+            this.clearButton.TabIndex = 62;
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Shubin.Properties.Resources.icons8_note_50;
+            this.pictureBox2.Location = new System.Drawing.Point(6, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(62, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.TabIndex = 60;
+            this.label1.Text = "Запись:";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(769, 605);
+            this.tabPage2.Size = new System.Drawing.Size(743, 577);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Изменения";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -414,7 +484,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(769, 605);
+            this.tabPage3.Size = new System.Drawing.Size(743, 577);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Использование";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -423,81 +493,10 @@
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(769, 605);
+            this.tabPage4.Size = new System.Drawing.Size(743, 577);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Обслуживание";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
-            this.label1.TabIndex = 60;
-            this.label1.Text = "Запись:";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.changeButton);
-            this.groupBox2.Controls.Add(this.saveButton);
-            this.groupBox2.Controls.Add(this.deleteButton);
-            this.groupBox2.Controls.Add(this.createButton);
-            this.groupBox2.Location = new System.Drawing.Point(591, 345);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(129, 225);
-            this.groupBox2.TabIndex = 63;
-            this.groupBox2.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(579, 325);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(155, 17);
-            this.label8.TabIndex = 64;
-            this.label8.Text = "Управление записями";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Shubin.Properties.Resources.icons8_note_50;
-            this.pictureBox4.Location = new System.Drawing.Point(7, 18);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(49, 50);
-            this.pictureBox4.TabIndex = 57;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::Shubin.Properties.Resources.icons8_broom_50;
-            this.pictureBox2.Location = new System.Drawing.Point(488, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(61, 56);
-            this.pictureBox2.TabIndex = 59;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Shubin.Properties.Resources.icons8_search_30;
-            this.pictureBox1.Location = new System.Drawing.Point(43, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 34);
-            this.pictureBox1.TabIndex = 61;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::Shubin.Properties.Resources.icons8_update_left_rotation_30;
-            this.pictureBox3.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(31, 34);
-            this.pictureBox3.TabIndex = 60;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // Main
             // 
@@ -520,15 +519,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,13 +565,13 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button updateButton;
+        private System.Windows.Forms.Button clearButton;
     }
 }
