@@ -66,7 +66,6 @@ namespace Shubin
                 Main mainForm = new Main(user);
                 this.Hide();
                 mainForm.ShowDialog();
-                this.Show();
             }
             else
             {
