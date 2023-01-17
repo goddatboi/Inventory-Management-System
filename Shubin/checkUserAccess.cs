@@ -12,7 +12,7 @@ namespace Shubin
 
         public bool IsAdmin { get; }
 
-        public string Status => IsAdmin ? "Admin" : "User";
+        public string Status => IsAdmin ? "Администратор" : "Пользователь";
 
         public checkUserAccess(string login, bool isAdmin) 
         {
