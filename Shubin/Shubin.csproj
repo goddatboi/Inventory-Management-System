@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Inventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Add_Inventory.Designer.cs">
-      <DependentUpon>Add_Inventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Admin_Panel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +53,12 @@
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="checkUserAccess.cs" />
+    <Compile Include="WorkerButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkerButton.Designer.cs">
+      <DependentUpon>WorkerButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataBaseConnection.cs" />
     <Compile Include="Log_In.cs">
       <SubType>Form</SubType>
@@ -66,11 +66,11 @@
     <Compile Include="Log_In.Designer.cs">
       <DependentUpon>Log_In.cs</DependentUpon>
     </Compile>
-    <Compile Include="Main.cs">
+    <Compile Include="User_Panel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="User_Panel.Designer.cs">
+      <DependentUpon>User_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,17 +80,14 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Add_Inventory.resx">
-      <DependentUpon>Add_Inventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="User_Panel.resx">
+      <DependentUpon>User_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkerButton.resx">
+      <DependentUpon>WorkerButton.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -120,6 +120,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-administrator-male-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarehouseWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarehouseBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RequestWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RequestBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

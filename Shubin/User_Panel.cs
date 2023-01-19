@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Drawing.Imaging;
+using System.IO;
 
 namespace Shubin
 {
@@ -20,24 +22,17 @@ namespace Shubin
         Deleted
     }
 
-    public partial class Main : Form
+    public partial class User_Panel : Form
     {
-        private readonly checkUserAccess _user;
 
         DataBaseConnection dataBase = new DataBaseConnection();
 
         int selectedRow;
 
-        public Main(checkUserAccess user)
+        public User_Panel()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            _user = user;
-        }
-
-        private void isAdmin()
-        {
-            управлениеToolStripMenuItem.Enabled = _user.IsAdmin;
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
@@ -235,13 +230,10 @@ namespace Shubin
 
         private void Main_Load(object sender, EventArgs e)
         {
-            toolStripUserStatus.Text = $"{_user.Login}: {_user.Status}";
-            isAdmin();
             dataGridView1.Columns.Add("IsNew", string.Empty);
             RefreshDataGridView(dataGridView1);
             dataGridView1.Columns["IsNew"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

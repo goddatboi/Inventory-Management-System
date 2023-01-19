@@ -15,7 +15,9 @@ namespace Shubin
 {
     public partial class Log_In : Form
     {
+
         DataBaseConnection dataBase = new DataBaseConnection();
+
         public Log_In()
         {
             InitializeComponent();
@@ -48,10 +50,11 @@ namespace Shubin
             var loginUser = Login_Log.Text;
             var passwordUser = Password_Log.Text;
 
+
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select ID, Login_User, Password_User, Is_Admin from RegUsers where Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT ID, Login_User, Password_User, Is_Admin FROM RegUsers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -60,12 +63,23 @@ namespace Shubin
 
             if (table.Rows.Count == 1)
             {
-                var user = new checkUserAccess(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
-
-                MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Main mainForm = new Main(user);
-                this.Hide();
-                mainForm.ShowDialog();
+                var isAdmin = (bool)table.Rows[0]["Is_Admin"];
+                if (isAdmin)
+                {
+                    MessageBox.Show("Вы успешно вошли как администратор!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Admin_Panel adminForm = new Admin_Panel();
+                    this.Hide();
+                    adminForm.ShowDialog();
+                    adminForm.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Вы успешно вошли как пользователь!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    User_Panel userForm = new User_Panel();
+                    this.Hide();
+                    userForm.ShowDialog();
+                    userForm.Dispose();
+                }
             }
             else
             {
@@ -79,12 +93,6 @@ namespace Shubin
             this.Hide();
             registerForm.ShowDialog();
             this.Show();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Login_Log.Text = "";
-            Password_Log.Text = "";
         }
     }
 }
