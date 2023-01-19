@@ -51,8 +51,11 @@
             this.textBox_Search = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.управлениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripUserStatus = new System.Windows.Forms.ToolStripTextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -68,11 +71,15 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.Inv_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Supplier_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Inv_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -263,10 +270,20 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 46);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Inv_ID,
+            this.Inv_Name,
+            this.Inv_Quantity,
+            this.Inv_Price,
+            this.Inv_PurchaseDate,
+            this.Inv_Worker_ID,
+            this.Inv_Supplier_ID,
+            this.Inv_Location,
+            this.Inv_Status});
+            this.dataGridView1.Location = new System.Drawing.Point(10, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(731, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(825, 256);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -283,7 +300,7 @@
             this.textBox_Search.Location = new System.Drawing.Point(81, 16);
             this.textBox_Search.Multiline = true;
             this.textBox_Search.Name = "textBox_Search";
-            this.textBox_Search.Size = new System.Drawing.Size(656, 24);
+            this.textBox_Search.Size = new System.Drawing.Size(750, 24);
             this.textBox_Search.TabIndex = 57;
             this.textBox_Search.TextChanged += new System.EventHandler(this.textBox_Search_TextChanged);
             // 
@@ -295,7 +312,7 @@
             this.информацияToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(751, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(852, 24);
             this.menuStrip1.TabIndex = 58;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -307,6 +324,20 @@
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
             this.менюToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.менюToolStripMenuItem.Text = "Меню";
+            // 
+            // сменитьПользователяToolStripMenuItem
+            // 
+            this.сменитьПользователяToolStripMenuItem.Name = "сменитьПользователяToolStripMenuItem";
+            this.сменитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.сменитьПользователяToolStripMenuItem.Text = "Сменить пользователя";
+            this.сменитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменитьПользователяToolStripMenuItem_Click);
+            // 
+            // выходToolStripMenuItem
+            // 
+            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.выходToolStripMenuItem.Text = "Выход";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // управлениеToolStripMenuItem
             // 
@@ -323,14 +354,21 @@
             this.информацияToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
             this.информацияToolStripMenuItem.Text = "Информация";
             // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            // 
             // toolStrip1
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripUserStatus});
-            this.toolStrip1.Location = new System.Drawing.Point(601, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(707, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(180, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(149, 25);
             this.toolStrip1.TabIndex = 59;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -346,13 +384,11 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(751, 628);
+            this.tabControl1.Size = new System.Drawing.Size(852, 628);
             this.tabControl1.TabIndex = 60;
             // 
             // tabPage1
@@ -367,7 +403,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(743, 602);
+            this.tabPage1.Size = new System.Drawing.Size(844, 602);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Инвентарь";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -475,9 +511,9 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(743, 577);
+            this.tabPage2.Size = new System.Drawing.Size(843, 602);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Изменения";
+            this.tabPage2.Text = "Запрос";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // dataGridView2
@@ -495,55 +531,70 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(743, 577);
+            this.tabPage3.Size = new System.Drawing.Size(843, 602);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Использование";
+            this.tabPage3.Text = "Возврат";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // Inv_ID
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(743, 577);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Обслуживание";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.Inv_ID.HeaderText = "ID";
+            this.Inv_ID.Name = "Inv_ID";
+            this.Inv_ID.ReadOnly = true;
             // 
-            // сменитьПользователяToolStripMenuItem
+            // Inv_Name
             // 
-            this.сменитьПользователяToolStripMenuItem.Name = "сменитьПользователяToolStripMenuItem";
-            this.сменитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.сменитьПользователяToolStripMenuItem.Text = "Сменить пользователя";
-            this.сменитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.сменитьПользователяToolStripMenuItem_Click);
+            this.Inv_Name.HeaderText = "Название";
+            this.Inv_Name.Name = "Inv_Name";
+            this.Inv_Name.ReadOnly = true;
             // 
-            // выходToolStripMenuItem
+            // Inv_Quantity
             // 
-            this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.выходToolStripMenuItem.Text = "Выход";
-            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
+            this.Inv_Quantity.HeaderText = "Количество";
+            this.Inv_Quantity.Name = "Inv_Quantity";
+            this.Inv_Quantity.ReadOnly = true;
             // 
-            // оПрограммеToolStripMenuItem
+            // Inv_Price
             // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
-            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
+            this.Inv_Price.HeaderText = "Цена";
+            this.Inv_Price.Name = "Inv_Price";
+            this.Inv_Price.ReadOnly = true;
             // 
-            // tabPage5
+            // Inv_PurchaseDate
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(743, 577);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Статистика";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.Inv_PurchaseDate.HeaderText = "Дата покупки";
+            this.Inv_PurchaseDate.Name = "Inv_PurchaseDate";
+            this.Inv_PurchaseDate.ReadOnly = true;
+            // 
+            // Inv_Worker_ID
+            // 
+            this.Inv_Worker_ID.HeaderText = "ID_Сотрудника";
+            this.Inv_Worker_ID.Name = "Inv_Worker_ID";
+            this.Inv_Worker_ID.ReadOnly = true;
+            // 
+            // Inv_Supplier_ID
+            // 
+            this.Inv_Supplier_ID.HeaderText = "ID_Поставщика";
+            this.Inv_Supplier_ID.Name = "Inv_Supplier_ID";
+            this.Inv_Supplier_ID.ReadOnly = true;
+            // 
+            // Inv_Location
+            // 
+            this.Inv_Location.HeaderText = "Расположение";
+            this.Inv_Location.Name = "Inv_Location";
+            this.Inv_Location.ReadOnly = true;
+            // 
+            // Inv_Status
+            // 
+            this.Inv_Status.HeaderText = "Статус";
+            this.Inv_Status.Name = "Inv_Status";
+            this.Inv_Status.ReadOnly = true;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 652);
+            this.ClientSize = new System.Drawing.Size(852, 652);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -604,7 +655,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -618,6 +668,14 @@
         private System.Windows.Forms.ToolStripMenuItem сменитьПользователяToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_PurchaseDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Worker_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Supplier_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Location;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Status;
     }
 }

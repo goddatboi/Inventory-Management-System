@@ -45,26 +45,6 @@ namespace Shubin
             Application.Exit();
         }
 
-        private void CreateColumns()
-        {
-            //Таблица InventoryItems
-            dataGridView1.Columns.Add("ID", "ID");
-            dataGridView1.Columns.Add("Name", "Наименование");
-            dataGridView1.Columns.Add("Model", "Модель");
-            dataGridView1.Columns.Add("SerialNumber", "Серийный номер");
-            dataGridView1.Columns.Add("Location", "Местоположение");
-            dataGridView1.Columns.Add("PurchaseDate", "Дата покупки");
-            dataGridView1.Columns.Add("Status", "Состояние");
-            dataGridView1.Columns.Add("IsNew", string.Empty);
-
-            //Таблица InventoryChanges
-            dataGridView2.Columns.Add("ID", "ID");
-            dataGridView2.Columns.Add("Inv_item_ID", "Идентификатор предмета");
-            dataGridView2.Columns.Add("Change_date", "Дата изменения");
-            dataGridView2.Columns.Add("Change_type", "Тип изменения");
-            dataGridView2.Columns.Add("IsNew", string.Empty);
-        }
-
         private void ClearFields()
         {
             textBox_ID.Text = "";
@@ -77,7 +57,7 @@ namespace Shubin
 
         private void ReadSingleRow(DataGridView DGW, IDataRecord record)
         {
-            DGW.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetString(2), record.GetString(3), record.GetString(4), record.GetDateTime(5), record.GetString(6), RowState.ModifiedNew);
+            DGW.Rows.Add(record.GetInt32(0), record.GetString(1), record.GetInt32(2), record.GetInt32(3), record.GetDateTime(4), record.GetInt32(5), record.GetInt32(6), record.GetString(7), record.GetString(8), RowState.ModifiedNew);
         }
 
         private void RefreshDataGridView(DataGridView DGW)
@@ -103,7 +83,7 @@ namespace Shubin
         {
             DGW.Rows.Clear();
 
-            string searchString = $"select * from InventoryItems where concat (ID, Name, Model, SerialNumber, Location, PurchaseDate, Status) like '%" + textBox_Search.Text + "%'";
+            string searchString = $"select * from InventoryItems where concat (Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Worker_ID, Inv_Supplier_ID, Inv_Location, Inv_Status) like '%" + textBox_Search.Text + "%'";
 
             SqlCommand command = new SqlCommand(searchString, dataBase.getConnection());
 
@@ -140,7 +120,7 @@ namespace Shubin
 
             for (int index = 0; index < dataGridView1.Rows.Count; index++)
             {
-                var rowState = (RowState)dataGridView1.Rows[index].Cells[7].Value;
+                var rowState = (RowState)dataGridView1.Rows[index].Cells[9].Value;
 
                 if (rowState == RowState.Existed)
                 {
@@ -150,7 +130,7 @@ namespace Shubin
                 if (rowState == RowState.Deleted)
                 {
                     var id = Convert.ToInt32(dataGridView1.Rows[index].Cells[0].Value);
-                    var deleteQuery = $"delete from InventoryItems where ID = {id}";
+                    var deleteQuery = $"DELETE FROM InventoryItems WHERE Inv_ID = {id}";
 
                     var command = new SqlCommand(deleteQuery, dataBase.getConnection());
                     command.ExecuteNonQuery();
@@ -160,13 +140,15 @@ namespace Shubin
                 {
                     var id = dataGridView1.Rows[index].Cells[0].Value.ToString();
                     var name = dataGridView1.Rows[index].Cells[1].Value.ToString();
-                    var model = dataGridView1.Rows[index].Cells[2].Value.ToString();
-                    var serialnum = dataGridView1.Rows[index].Cells[3].Value.ToString();
-                    var location = dataGridView1.Rows[index].Cells[4].Value.ToString();
-                    var purchasedate = dataGridView1.Rows[index].Cells[5].Value.ToString();
-                    var status = dataGridView1.Rows[index].Cells[6].Value.ToString();
+                    var qty = dataGridView1.Rows[index].Cells[2].Value.ToString();
+                    var price = dataGridView1.Rows[index].Cells[3].Value.ToString();
+                    var purchasedate = dataGridView1.Rows[index].Cells[4].Value.ToString();
+                    var worker_id = dataGridView1.Rows[index].Cells[5].Value.ToString();
+                    var supplier_id = dataGridView1.Rows[index].Cells[6].Value.ToString();
+                    var location = dataGridView1.Rows[index].Cells[7].Value.ToString();
+                    var status = dataGridView1.Rows[index].Cells[8].Value.ToString();
 
-                    var changeQuery = $"update InventoryItems set Name = '{name}', Model = '{model}', SerialNumber = '{serialnum}', Location = '{location}', PurchaseDate = '{purchasedate}', Status = '{status}' where id = '{id}'";
+                    var changeQuery = $"UPDATE InventoryItems SET Inv_Name = '{name}', Inv_Quantity = '{qty}', Inv_Price = '{price}', Inv_PurchaseDate = '{purchasedate}', Inv_Worker_ID = '{worker_id}', Inv_Supplier_ID = '{supplier_id}', Inv_Location = '{location}', Inv_Status = '{location}' where Inv_ID = '{id}'";
 
                     var command = new SqlCommand(changeQuery, dataBase.getConnection());
                     command.ExecuteNonQuery();
@@ -255,7 +237,7 @@ namespace Shubin
         {
             toolStripUserStatus.Text = $"{_user.Login}: {_user.Status}";
             isAdmin();
-            CreateColumns();
+            dataGridView1.Columns.Add("IsNew", string.Empty);
             RefreshDataGridView(dataGridView1);
             dataGridView1.Columns["IsNew"].Visible = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -296,7 +278,7 @@ namespace Shubin
             try
             {
                 dataBase.openConnection();
-                var addQuery = $"insert into InventoryItems (Name, Model, SerialNumber, Location, PurchaseDate, Status) values ('{name}','{model}','{serialnum}','{location}','{purchasedate}','{status}')";
+                var addQuery = $"INSERT INTO InventoryItems (Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Worker_ID, Inv_Supplier_ID, Inv_Location, Inv_Status) values ('{name}','{model}','{serialnum}','{location}','{purchasedate}','{status}')";
                 var command = new SqlCommand(addQuery, dataBase.getConnection());
                 int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
