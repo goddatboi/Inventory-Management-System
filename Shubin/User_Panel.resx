@@ -144,6 +144,33 @@
   <metadata name="Inv_Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="Inv_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Name.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Quantity.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Price.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_PurchaseDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Worker_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Supplier_ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Location.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Inv_Status.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
@@ -197,7 +224,7 @@
   <data name="requestButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAA6VJREFUaEPt2UmIFFccx/EJiQaXuBtciRJRVDAoImgQQXGNxJNCXEAkARdUSE5q
+        DgAACw4BQL7hQQAAA6VJREFUaEPt2UmIFFccx/EJiQaXuBtciRJRVDAoImgQQXGNxJNCXEAkARdUSE5q
         0IMHL0YERSGiIOYgCipuB8GDxn2JW1wComhA3GLcNWLU77fxQVlUO9PTPT1V2D/4wHT1q6L+9V69el1T
         VUkllaQyn2I2juAxXhfgd6QiHXEaSSdZE/tR77EnQhEXMQ6fIXOZg1BECzdkNUdhIfZEpvMIFpLJ4RSN
         RSjzqRSStlQKSVsyVYhLiBP4PPfp3eQrxLbuczj3KSU5Bk/2HOLFJBViG9u63X1Tk7Y4C0/MpUh7hMQL
@@ -219,7 +246,7 @@
   <data name="requestButton.ImageHover" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAtFJREFUaEPt2UvITGEcx/ERvS7ldcu9bCQWyA4bSkqSa6FkI2sUxVJZiQULNlZY
+        DwAACw8BkvkDpQAAAtFJREFUaEPt2UvITGEcx/ERvS7ldcu9bCQWyA4bSkqSa6FkI2sUxVJZiQULNlZY
         KGSDrLBg4ZJbLlGuSUKIyP32/U099cwz/2dmzpl5X+ep86tPvTPvc2bO/5znOec5z1TKlClTyPTHBlzG
         Z/zN4CIKkfG4BWsnW3EB/z06E66I+1iKwUguG+GKGKo3Us0VqBCdiaTzCSokye7kR0VI8ikLKVrKQoqW
         pArRFOIaRlVf1SZWiNpqm0vVVwXJVWhn7yAsxipEbdRW72vbwmQkbkM7pqnIWLiEhYRtx6BQiRXjF1L4
@@ -237,7 +264,7 @@
   <data name="requestButton.ImageNormal" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAA6VJREFUaEPt2UmIFFccx/EJiQaXuBtciRJRVDAoImgQQXGNxJNCXEAkARdUSE5q
+        DwAACw8BkvkDpQAAA6VJREFUaEPt2UmIFFccx/EJiQaXuBtciRJRVDAoImgQQXGNxJNCXEAkARdUSE5q
         0IMHL0YERSGiIOYgCipuB8GDxn2JW1wComhA3GLcNWLU77fxQVlUO9PTPT1V2D/4wHT1q6L+9V69el1T
         VUkllaQyn2I2juAxXhfgd6QiHXEaSSdZE/tR77EnQhEXMQ6fIXOZg1BECzdkNUdhIfZEpvMIFpLJ4RSN
         RSjzqRSStlQKSVsyVYhLiBP4PPfp3eQrxLbuczj3KSU5Bk/2HOLFJBViG9u63X1Tk7Y4C0/MpUh7hMQL
