@@ -30,17 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Panel));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.workersButton = new Shubin.WorkerButton();
+            this.label3 = new System.Windows.Forms.Label();
             this.usersButton = new Shubin.WorkerButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.categoryButton = new Shubin.WorkerButton();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.suppliersButton = new Shubin.WorkerButton();
             this.requestButton = new Shubin.WorkerButton();
+            this.adminMain_Panel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersButton)).BeginInit();
@@ -69,45 +70,15 @@
             this.panel1.Size = new System.Drawing.Size(977, 90);
             this.panel1.TabIndex = 69;
             // 
-            // label12
+            // label9
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(475, 65);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 14);
-            this.label12.TabIndex = 68;
-            this.label12.Text = "Запросы";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(645, 65);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(92, 14);
-            this.label13.TabIndex = 69;
-            this.label13.Text = "Поставщики";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(747, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 14);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Категории";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(558, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 14);
-            this.label3.TabIndex = 72;
-            this.label3.Text = "Работники";
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(12, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(278, 23);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Панель администратора";
             // 
             // label4
             // 
@@ -118,16 +89,6 @@
             this.label4.Size = new System.Drawing.Size(104, 14);
             this.label4.TabIndex = 75;
             this.label4.Text = "Пользователи";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(12, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(278, 23);
-            this.label9.TabIndex = 70;
-            this.label9.Text = "Панель администратора";
             // 
             // workersButton
             // 
@@ -142,6 +103,16 @@
             this.workersButton.TabIndex = 70;
             this.workersButton.TabStop = false;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(558, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 14);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Работники";
+            // 
             // usersButton
             // 
             this.usersButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -155,6 +126,16 @@
             this.usersButton.TabIndex = 74;
             this.usersButton.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(747, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 14);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Категории";
+            // 
             // categoryButton
             // 
             this.categoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -167,6 +148,26 @@
             this.categoryButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.categoryButton.TabIndex = 71;
             this.categoryButton.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(645, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 14);
+            this.label13.TabIndex = 69;
+            this.label13.Text = "Поставщики";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(475, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 14);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "Запросы";
             // 
             // suppliersButton
             // 
@@ -193,12 +194,23 @@
             this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.requestButton.TabIndex = 65;
             this.requestButton.TabStop = false;
+            this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
+            // 
+            // adminMain_Panel
+            // 
+            this.adminMain_Panel.BackColor = System.Drawing.Color.Transparent;
+            this.adminMain_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminMain_Panel.Location = new System.Drawing.Point(0, 90);
+            this.adminMain_Panel.Name = "adminMain_Panel";
+            this.adminMain_Panel.Size = new System.Drawing.Size(977, 446);
+            this.adminMain_Panel.TabIndex = 70;
             // 
             // Admin_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(977, 536);
+            this.Controls.Add(this.adminMain_Panel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_Panel";
@@ -228,5 +240,6 @@
         private WorkerButton suppliersButton;
         private WorkerButton requestButton;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel adminMain_Panel;
     }
 }

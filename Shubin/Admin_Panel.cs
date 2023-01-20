@@ -25,5 +25,29 @@ namespace Shubin
         {
 
         }
+
+        private Form activeForm = null;
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+
+            activeForm = childForm;
+            activeForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            adminMain_Panel.Controls.Add(childForm);
+            adminMain_Panel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void requestButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Requests());
+        }
     }
 }

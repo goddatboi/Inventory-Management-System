@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Runtime.Remoting.Messaging;
-using Shubin;
 
 namespace Shubin
 {
@@ -70,6 +69,11 @@ namespace Shubin
                 makeReqForm.dateTimePicker.Enabled = false;
                 makeReqForm.ShowDialog();
             }
+            LoadInventory();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
             LoadInventory();
         }
     }

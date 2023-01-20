@@ -33,6 +33,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.returnButton = new Shubin.WorkerButton();
+            this.requestButton = new Shubin.WorkerButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.менюToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сменитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,14 +43,10 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userMain_Panel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.returnButton = new Shubin.WorkerButton();
-            this.requestButton = new Shubin.WorkerButton();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            this.userMain_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.returnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,9 +69,9 @@
             this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.Location = new System.Drawing.Point(12, 30);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(298, 23);
+            this.label9.Size = new System.Drawing.Size(249, 23);
             this.label9.TabIndex = 69;
-            this.label9.Text = "Пользовательская панель";
+            this.label9.Text = "Панель пользователя";
             // 
             // label13
             // 
@@ -94,6 +92,34 @@
             this.label12.Size = new System.Drawing.Size(55, 14);
             this.label12.TabIndex = 68;
             this.label12.Text = "Запрос";
+            // 
+            // returnButton
+            // 
+            this.returnButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.returnButton.Image = global::Shubin.Properties.Resources.ReturnWhite;
+            this.returnButton.ImageHover = global::Shubin.Properties.Resources.ReturnBlack;
+            this.returnButton.ImageNormal = global::Shubin.Properties.Resources.ReturnWhite;
+            this.returnButton.Location = new System.Drawing.Point(427, 13);
+            this.returnButton.Name = "returnButton";
+            this.returnButton.Size = new System.Drawing.Size(50, 50);
+            this.returnButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.returnButton.TabIndex = 66;
+            this.returnButton.TabStop = false;
+            this.returnButton.Click += new System.EventHandler(this.returnButton_Click);
+            // 
+            // requestButton
+            // 
+            this.requestButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.requestButton.Image = ((System.Drawing.Image)(resources.GetObject("requestButton.Image")));
+            this.requestButton.ImageHover = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageHover")));
+            this.requestButton.ImageNormal = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageNormal")));
+            this.requestButton.Location = new System.Drawing.Point(339, 13);
+            this.requestButton.Name = "requestButton";
+            this.requestButton.Size = new System.Drawing.Size(50, 50);
+            this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.requestButton.TabIndex = 65;
+            this.requestButton.TabStop = false;
+            this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
             // 
             // menuStrip1
             // 
@@ -150,48 +176,11 @@
             // 
             // userMain_Panel
             // 
-            this.userMain_Panel.Controls.Add(this.panel3);
             this.userMain_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userMain_Panel.Location = new System.Drawing.Point(0, 114);
             this.userMain_Panel.Name = "userMain_Panel";
             this.userMain_Panel.Size = new System.Drawing.Size(573, 414);
             this.userMain_Panel.TabIndex = 71;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.Gold;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 384);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(573, 30);
-            this.panel3.TabIndex = 0;
-            // 
-            // returnButton
-            // 
-            this.returnButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.returnButton.Image = global::Shubin.Properties.Resources.ReturnWhite;
-            this.returnButton.ImageHover = global::Shubin.Properties.Resources.ReturnBlack;
-            this.returnButton.ImageNormal = global::Shubin.Properties.Resources.ReturnWhite;
-            this.returnButton.Location = new System.Drawing.Point(427, 13);
-            this.returnButton.Name = "returnButton";
-            this.returnButton.Size = new System.Drawing.Size(50, 50);
-            this.returnButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.returnButton.TabIndex = 66;
-            this.returnButton.TabStop = false;
-            // 
-            // requestButton
-            // 
-            this.requestButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.requestButton.Image = ((System.Drawing.Image)(resources.GetObject("requestButton.Image")));
-            this.requestButton.ImageHover = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageHover")));
-            this.requestButton.ImageNormal = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageNormal")));
-            this.requestButton.Location = new System.Drawing.Point(339, 13);
-            this.requestButton.Name = "requestButton";
-            this.requestButton.Size = new System.Drawing.Size(50, 50);
-            this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.requestButton.TabIndex = 65;
-            this.requestButton.TabStop = false;
-            this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
             // 
             // User_Panel
             // 
@@ -207,11 +196,10 @@
             this.Load += new System.EventHandler(this.User_Panel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.userMain_Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.returnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,6 +221,5 @@
         private System.Windows.Forms.ToolStripMenuItem информацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.Panel userMain_Panel;
-        private System.Windows.Forms.Panel panel3;
     }
 }

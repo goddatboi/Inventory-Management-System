@@ -78,6 +78,12 @@
     <Compile Include="Request_Item.Designer.cs">
       <DependentUpon>Request_Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Return_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Return_Item.Designer.cs">
+      <DependentUpon>Return_Item.cs</DependentUpon>
+    </Compile>
     <Compile Include="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +256,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddCircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Confirm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

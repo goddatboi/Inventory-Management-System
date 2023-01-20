@@ -33,8 +33,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Request_Item));
             this.panel1 = new System.Windows.Forms.Panel();
             this.DGV_Inventory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Inv_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +40,10 @@
             this.Inv_PurchaseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MakeRequest = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.workersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchtextBox = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Inventory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -49,10 +51,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.searchtextBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 548);
+            this.panel1.Location = new System.Drawing.Point(0, 534);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(526, 31);
+            this.panel1.Size = new System.Drawing.Size(526, 45);
             this.panel1.TabIndex = 0;
             // 
             // DGV_Inventory
@@ -82,21 +85,9 @@
             this.DGV_Inventory.EnableHeadersVisualStyles = false;
             this.DGV_Inventory.Location = new System.Drawing.Point(0, 0);
             this.DGV_Inventory.Name = "DGV_Inventory";
-            this.DGV_Inventory.Size = new System.Drawing.Size(526, 548);
+            this.DGV_Inventory.Size = new System.Drawing.Size(526, 534);
             this.DGV_Inventory.TabIndex = 1;
             this.DGV_Inventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Inventory_CellContentClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.RequestWhite;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 5;
-            // 
-            // workersBindingSource
-            // 
-            this.workersBindingSource.DataMember = "Workers";
             // 
             // Inv_ID
             // 
@@ -143,7 +134,7 @@
             this.Inv_Worker_ID.HeaderText = "ID_Работника";
             this.Inv_Worker_ID.Name = "Inv_Worker_ID";
             this.Inv_Worker_ID.Visible = false;
-            this.Inv_Worker_ID.Width = 122;
+            this.Inv_Worker_ID.Width = 124;
             // 
             // MakeRequest
             // 
@@ -152,6 +143,25 @@
             this.MakeRequest.Image = global::Shubin.Properties.Resources.AddCircle;
             this.MakeRequest.Name = "MakeRequest";
             this.MakeRequest.Width = 5;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.RequestWhite;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // workersBindingSource
+            // 
+            this.workersBindingSource.DataMember = "Workers";
+            // 
+            // searchtextBox
+            // 
+            this.searchtextBox.Location = new System.Drawing.Point(309, 13);
+            this.searchtextBox.Name = "searchtextBox";
+            this.searchtextBox.Size = new System.Drawing.Size(205, 20);
+            this.searchtextBox.TabIndex = 0;
+            this.searchtextBox.TextChanged += new System.EventHandler(this.searchtextBox_TextChanged);
             // 
             // Request_Item
             // 
@@ -164,6 +174,8 @@
             this.Name = "Request_Item";
             this.Text = "InventoryPro";
             this.Load += new System.EventHandler(this.Request_Item_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Inventory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -183,5 +195,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Inv_PurchaseDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Worker_ID;
         private System.Windows.Forms.DataGridViewImageColumn MakeRequest;
+        private System.Windows.Forms.TextBox searchtextBox;
     }
 }

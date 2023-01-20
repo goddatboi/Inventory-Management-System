@@ -63,6 +63,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Suppliers";
             this.Text = "InventoryPro";
+            this.Load += new System.EventHandler(this.Suppliers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

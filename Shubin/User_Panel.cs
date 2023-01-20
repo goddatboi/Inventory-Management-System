@@ -28,7 +28,10 @@ namespace Shubin
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
+            {
                 activeForm.Close();
+            }
+
             activeForm = childForm;
             activeForm.TopLevel= false;
             childForm.FormBorderStyle= FormBorderStyle.None;
@@ -42,6 +45,11 @@ namespace Shubin
         private void requestButton_Click(object sender, EventArgs e)
         {
             openChildForm(new Request_Item());
+        }
+
+        private void returnButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Return_Item());
         }
     }
 }
