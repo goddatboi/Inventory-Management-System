@@ -70,6 +70,7 @@ namespace Shubin
                 makeReqForm.dateTimePicker.Enabled = false;
                 makeReqForm.ShowDialog();
             }
+            LoadInventory();
         }
     }
 }

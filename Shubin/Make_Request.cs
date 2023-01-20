@@ -30,16 +30,24 @@ namespace Shubin
         {
             dataBase.openConnection();
 
-            //command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
+            command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
 
             var name = nameTextBox.Text;
             var qty = qtyUpDown.Text;
-            var worker = workertextBox.Text;
+            var worker = Convert.ToInt32(command.ExecuteScalar());
             var invid = IDtextBox.Text;
             var date = dateTimePicker.Value;
 
             try
             {
+                var checkqty = $"SELECT Inv_Quantity FROM InventoryItems WHERE Inv_ID = '{invid}'";
+                var commandqty = new SqlCommand(checkqty, dataBase.getConnection());
+                var invqty = Convert.ToInt32(commandqty.ExecuteScalar());
+                if (Convert.ToInt32(qty) > invqty)
+                {
+                    MessageBox.Show("Количество в запросе не может быть больше, чем количество в инвентаре!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 var addQuery = "INSERT INTO Requests (Req_Name, Req_Quantity, Req_Worker_ID, Req_Inv_ID, Req_Date, Req_Status) VALUES (@name, @qty, @worker, @inv_id, @date, 'Рассмотрение')";
                 var command = new SqlCommand(addQuery, dataBase.getConnection());
                 command.Parameters.AddWithValue("@name", name);
@@ -51,6 +59,10 @@ namespace Shubin
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Запрос успешно отправлен!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var updateQuery = $"UPDATE InventoryItems SET Inv_Quantity = Inv_Quantity - {qty} WHERE Inv_ID = '{invid}'";
+                    var updateCommand = new SqlCommand(updateQuery, dataBase.getConnection());
+                    updateCommand.ExecuteNonQuery();
+                    this.Hide();
                 }
             }
             catch (SqlException ex)
@@ -65,11 +77,7 @@ namespace Shubin
 
         private void cancelreqbutton_Click(object sender, EventArgs e)
         {
-            dataBase.openConnection();
-
-            command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
-
-            MessageBox.Show(Convert.ToString(command.ExecuteScalar()));
+            this.Hide();
         }
     }
 }
