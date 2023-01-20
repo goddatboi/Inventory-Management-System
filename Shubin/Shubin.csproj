@@ -59,6 +59,13 @@
       <DependentUpon>Categories.cs</DependentUpon>
     </Compile>
     <Compile Include="checkUserAccess.cs" />
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Make_Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Make_Request.Designer.cs">
+      <DependentUpon>Make_Request.cs</DependentUpon>
+    </Compile>
     <Compile Include="Requests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,11 +78,6 @@
     <Compile Include="Request_Item.Designer.cs">
       <DependentUpon>Request_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShubinDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +89,12 @@
     </Compile>
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Panel.Designer.cs">
+      <DependentUpon>User_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkerButton.cs">
       <SubType>Component</SubType>
@@ -101,11 +109,11 @@
     <Compile Include="Log_In.Designer.cs">
       <DependentUpon>Log_In.cs</DependentUpon>
     </Compile>
-    <Compile Include="User_Panel.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="User_Panel.Designer.cs">
-      <DependentUpon>User_Panel.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +138,9 @@
     <EmbeddedResource Include="Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Make_Request.resx">
+      <DependentUpon>Make_Request.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Requests.resx">
       <DependentUpon>Requests.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,8 +153,8 @@
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User_Panel.resx">
-      <DependentUpon>User_Panel.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -157,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Panel.resx">
+      <DependentUpon>User_Panel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkerButton.resx">
       <DependentUpon>WorkerButton.cs</DependentUpon>
@@ -173,17 +187,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ShubinDataSet.xsc">
-      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ShubinDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ShubinDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ShubinDataSet.xss">
-      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -241,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UsersBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddCircle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

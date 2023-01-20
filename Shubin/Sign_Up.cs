@@ -43,15 +43,24 @@ namespace Shubin
                 return;
             }
 
+            var name = nametextBox.Text;
+            var fam = famtextBox.Text;
+            var depr = deprtextBox.Text;
+            var post = posttextBox.Text;
             var loginUser = Login_Reg.Text;
             var passwordUser = Password_Reg.Text;
 
-            string querystring = $"INSERT INTO RegUsers(Login_User, Password_User, Is_Admin) VALUES ('{loginUser}', '{passwordUser}', 0)";
+            string querystring = $"INSERT INTO Workers(Work_Name, Work_Fam, Work_Department, Work_Post, Login_User, Password_User, Is_Admin) VALUES ('{name}','{fam}','{depr}','{post}','{loginUser}', '{passwordUser}', 0)";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
             dataBase.openConnection();
             int rowsAffected = command.ExecuteNonQuery();
+
+            if (checkUser())
+            {
+                return;
+            }
 
             if (rowsAffected > 0)
             {
@@ -73,7 +82,7 @@ namespace Shubin
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string querystring = $"SELECT ID, Login_User, Password_User, Is_Admin FROM RegUsers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT Work_ID, Login_User, Password_User, Is_Admin FROM Workers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -89,12 +98,6 @@ namespace Shubin
             {
                 return false;
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Login_Reg.Text = "";
-            Password_Reg.Text = "";
         }
     }
 }

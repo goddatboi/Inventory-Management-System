@@ -212,7 +212,6 @@
         #endregion
 
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.TextBox Login_Log;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.TextBox Password_Log;
         private System.Windows.Forms.Label label1;
@@ -224,6 +223,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox Login_Log;
     }
 }
 

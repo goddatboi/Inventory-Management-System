@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms.VisualStyles;
+using static Shubin.Program;
 
 namespace Shubin
 {
@@ -17,7 +18,6 @@ namespace Shubin
     {
 
         DataBaseConnection dataBase = new DataBaseConnection();
-
         public Log_In()
         {
             InitializeComponent();
@@ -49,12 +49,12 @@ namespace Shubin
 
             var loginUser = Login_Log.Text;
             var passwordUser = Password_Log.Text;
-
+            GlobalVariables.login = Login_Log.Text;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"SELECT ID, Login_User, Password_User, Is_Admin FROM RegUsers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT Work_ID, Login_User, Password_User, Is_Admin FROM Workers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 

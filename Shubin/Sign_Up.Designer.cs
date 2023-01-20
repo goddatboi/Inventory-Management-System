@@ -40,6 +40,14 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.nametextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.famtextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.deprtextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.posttextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -49,7 +57,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(88, 163);
+            this.label4.Location = new System.Drawing.Point(161, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 16);
             this.label4.TabIndex = 66;
@@ -59,7 +67,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(88, 100);
+            this.label5.Location = new System.Drawing.Point(166, 227);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 65;
@@ -68,7 +76,7 @@
             // Password_Reg
             // 
             this.Password_Reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Password_Reg.Location = new System.Drawing.Point(91, 182);
+            this.Password_Reg.Location = new System.Drawing.Point(105, 308);
             this.Password_Reg.Multiline = true;
             this.Password_Reg.Name = "Password_Reg";
             this.Password_Reg.Size = new System.Drawing.Size(181, 28);
@@ -77,7 +85,7 @@
             // Login_Reg
             // 
             this.Login_Reg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Login_Reg.Location = new System.Drawing.Point(91, 119);
+            this.Login_Reg.Location = new System.Drawing.Point(105, 246);
             this.Login_Reg.Multiline = true;
             this.Login_Reg.Name = "Login_Reg";
             this.Login_Reg.Size = new System.Drawing.Size(181, 28);
@@ -90,7 +98,7 @@
             this.registerButton.FlatAppearance.BorderSize = 0;
             this.registerButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.registerButton.ForeColor = System.Drawing.Color.Black;
-            this.registerButton.Location = new System.Drawing.Point(91, 216);
+            this.registerButton.Location = new System.Drawing.Point(105, 342);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(181, 50);
             this.registerButton.TabIndex = 63;
@@ -101,7 +109,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Shubin.Properties.Resources.icons8_add_user_male_70;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(306, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(70, 70);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -118,7 +126,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(364, 86);
+            this.panel1.Size = new System.Drawing.Size(388, 86);
             this.panel1.TabIndex = 70;
             // 
             // pictureBox3
@@ -135,7 +143,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(87, 21);
+            this.label10.Location = new System.Drawing.Point(96, 22);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(190, 32);
             this.label10.TabIndex = 65;
@@ -145,7 +153,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(93, 53);
+            this.label9.Location = new System.Drawing.Point(102, 54);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(179, 14);
             this.label9.TabIndex = 64;
@@ -155,16 +163,100 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Gold;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 288);
+            this.panel2.Location = new System.Drawing.Point(0, 412);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(364, 31);
+            this.panel2.Size = new System.Drawing.Size(388, 31);
             this.panel2.TabIndex = 71;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(9, 109);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "ИМЯ";
+            // 
+            // nametextBox
+            // 
+            this.nametextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nametextBox.Location = new System.Drawing.Point(12, 128);
+            this.nametextBox.Multiline = true;
+            this.nametextBox.Name = "nametextBox";
+            this.nametextBox.Size = new System.Drawing.Size(181, 28);
+            this.nametextBox.TabIndex = 72;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(196, 109);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 16);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "ФАМИЛИЯ";
+            // 
+            // famtextBox
+            // 
+            this.famtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.famtextBox.Location = new System.Drawing.Point(199, 128);
+            this.famtextBox.Multiline = true;
+            this.famtextBox.Name = "famtextBox";
+            this.famtextBox.Size = new System.Drawing.Size(181, 28);
+            this.famtextBox.TabIndex = 74;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(9, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 16);
+            this.label3.TabIndex = 77;
+            this.label3.Text = "ОТДЕЛ";
+            // 
+            // deprtextBox
+            // 
+            this.deprtextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.deprtextBox.Location = new System.Drawing.Point(12, 183);
+            this.deprtextBox.Multiline = true;
+            this.deprtextBox.Name = "deprtextBox";
+            this.deprtextBox.Size = new System.Drawing.Size(181, 28);
+            this.deprtextBox.TabIndex = 76;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.Location = new System.Drawing.Point(196, 164);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 16);
+            this.label6.TabIndex = 79;
+            this.label6.Text = "ДОЛЖНОСТЬ";
+            // 
+            // posttextBox
+            // 
+            this.posttextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.posttextBox.Location = new System.Drawing.Point(199, 183);
+            this.posttextBox.Multiline = true;
+            this.posttextBox.Name = "posttextBox";
+            this.posttextBox.Size = new System.Drawing.Size(181, 28);
+            this.posttextBox.TabIndex = 78;
             // 
             // Sign_Up
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 319);
+            this.ClientSize = new System.Drawing.Size(388, 443);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.posttextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.deprtextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.famtextBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.nametextBox);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
@@ -197,5 +289,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox nametextBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox famtextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox deprtextBox;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox posttextBox;
     }
 }

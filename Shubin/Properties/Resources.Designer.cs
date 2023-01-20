@@ -83,6 +83,16 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddCircle {
+            get {
+                object obj = ResourceManager.GetObject("AddCircle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CategoryBlack {
             get {
                 object obj = ResourceManager.GetObject("CategoryBlack", resourceCulture);
@@ -96,6 +106,16 @@ namespace Shubin.Properties {
         internal static System.Drawing.Bitmap CategoryWhite {
             get {
                 object obj = ResourceManager.GetObject("CategoryWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit {
+            get {
+                object obj = ResourceManager.GetObject("Edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
