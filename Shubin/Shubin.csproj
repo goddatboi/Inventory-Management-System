@@ -53,6 +53,17 @@
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
     <Compile Include="checkUserAccess.cs" />
+    <Compile Include="Request_Item.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Request_Item.Designer.cs">
+      <DependentUpon>Request_Item.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShubinDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="WorkerButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -86,6 +97,9 @@
     <EmbeddedResource Include="Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Request_Item.resx">
+      <DependentUpon>Request_Item.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User_Panel.resx">
       <DependentUpon>User_Panel.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +128,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ShubinDataSet.xsc">
+      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ShubinDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShubinDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ShubinDataSet.xss">
+      <DependentUpon>ShubinDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -141,6 +166,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\RequestBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddButtonBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

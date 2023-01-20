@@ -46,7 +46,7 @@ namespace Shubin
             var loginUser = Login_Reg.Text;
             var passwordUser = Password_Reg.Text;
 
-            string querystring = $"insert into RegUsers(Login_User, Password_User, Is_Admin) values ('{loginUser}', '{passwordUser}', 0)";
+            string querystring = $"INSERT INTO RegUsers(Login_User, Password_User, Is_Admin) VALUES ('{loginUser}', '{passwordUser}', 0)";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -73,7 +73,7 @@ namespace Shubin
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string querystring = $"select ID, Login_User, Password_User, Is_Admin from RegUsers where Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT ID, Login_User, Password_User, Is_Admin FROM RegUsers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -95,11 +95,6 @@ namespace Shubin
         {
             Login_Reg.Text = "";
             Password_Reg.Text = "";
-        }
-
-        private void registerButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

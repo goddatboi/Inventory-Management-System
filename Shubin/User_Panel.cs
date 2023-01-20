@@ -58,7 +58,7 @@ namespace Shubin
         private void RefreshDataGridView(DataGridView DGW)
         {
             DGW.Rows.Clear();
-            string querystring = ($"select * from InventoryItems");
+            string querystring = ($"SELECT * FROM InventoryItems");
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 

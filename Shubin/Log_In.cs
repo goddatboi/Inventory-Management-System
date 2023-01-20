@@ -66,7 +66,7 @@ namespace Shubin
                 var isAdmin = (bool)table.Rows[0]["Is_Admin"];
                 if (isAdmin)
                 {
-                    MessageBox.Show("Вы успешно вошли как администратор!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Вы успешно вошли как Администратор!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Admin_Panel adminForm = new Admin_Panel();
                     this.Hide();
                     adminForm.ShowDialog();
@@ -74,7 +74,7 @@ namespace Shubin
                 }
                 else
                 {
-                    MessageBox.Show("Вы успешно вошли как пользователь!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Вы успешно вошли как Пользователь!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     User_Panel userForm = new User_Panel();
                     this.Hide();
                     userForm.ShowDialog();
