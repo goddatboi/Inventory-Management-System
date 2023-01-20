@@ -66,8 +66,6 @@ namespace Shubin
                 nametextBox.Text = row.Cells[1].Value.ToString();
                 qtynumericUpDown.Text = row.Cells[2].Value.ToString();
             }
-
-
         }
 
         private void new_requestButton_Click(object sender, EventArgs e)

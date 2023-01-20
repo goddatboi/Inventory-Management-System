@@ -52,7 +52,19 @@
     <Compile Include="Admin_Panel.Designer.cs">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
     <Compile Include="checkUserAccess.cs" />
+    <Compile Include="Requests.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Requests.Designer.cs">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Request_Item.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +75,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ShubinDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suppliers.Designer.cs">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
     </Compile>
     <Compile Include="WorkerButton.cs">
       <SubType>Component</SubType>
@@ -91,14 +115,32 @@
     <Compile Include="Sign_Up.Designer.cs">
       <DependentUpon>Sign_Up.cs</DependentUpon>
     </Compile>
+    <Compile Include="Workers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Workers.Designer.cs">
+      <DependentUpon>Workers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Requests.resx">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Request_Item.resx">
       <DependentUpon>Request_Item.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suppliers.resx">
+      <DependentUpon>Suppliers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Panel.resx">
       <DependentUpon>User_Panel.cs</DependentUpon>
@@ -118,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WorkerButton.resx">
       <DependentUpon>WorkerButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Workers.resx">
+      <DependentUpon>Workers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -172,6 +217,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AddButtonBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WorkersWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WorkersBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SupplierWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SupplierBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CategoryWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CategoryBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsersWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UsersBlack.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

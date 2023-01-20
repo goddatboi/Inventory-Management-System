@@ -28,168 +28,205 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.saveButton = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.deleteButton = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Panel));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.workersButton = new Shubin.WorkerButton();
+            this.usersButton = new Shubin.WorkerButton();
+            this.categoryButton = new Shubin.WorkerButton();
+            this.suppliersButton = new Shubin.WorkerButton();
+            this.requestButton = new Shubin.WorkerButton();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workersButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestButton)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // panel1
             // 
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(556, 477);
-            this.tabControl1.TabIndex = 26;
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.workersButton);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.usersButton);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.categoryButton);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.suppliersButton);
+            this.panel1.Controls.Add(this.requestButton);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(977, 90);
+            this.panel1.TabIndex = 69;
             // 
-            // tabPage1
+            // label12
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(548, 451);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Работники";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(475, 65);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(66, 14);
+            this.label12.TabIndex = 68;
+            this.label12.Text = "Запросы";
             // 
-            // tabPage2
+            // label13
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(548, 451);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Поставщики";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(645, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(92, 14);
+            this.label13.TabIndex = 69;
+            this.label13.Text = "Поставщики";
             // 
-            // tabPage3
+            // label1
             // 
-            this.tabPage3.Controls.Add(this.dataGridView1);
-            this.tabPage3.Controls.Add(this.label2);
-            this.tabPage3.Controls.Add(this.saveButton);
-            this.tabPage3.Controls.Add(this.pictureBox2);
-            this.tabPage3.Controls.Add(this.deleteButton);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(548, 451);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = " Пользователи";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(747, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 14);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Категории";
             // 
-            // dataGridView1
+            // label3
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 101);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(435, 237);
-            this.dataGridView1.TabIndex = 26;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(558, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 14);
+            this.label3.TabIndex = 72;
+            this.label3.Text = "Работники";
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(93, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(232, 24);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Панель администратора";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(837, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 14);
+            this.label4.TabIndex = 75;
+            this.label4.Text = "Пользователи";
             // 
-            // saveButton
+            // label9
             // 
-            this.saveButton.Location = new System.Drawing.Point(17, 356);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(117, 46);
-            this.saveButton.TabIndex = 27;
-            this.saveButton.Text = "Сохранить";
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(12, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(278, 23);
+            this.label9.TabIndex = 70;
+            this.label9.Text = "Панель администратора";
             // 
-            // pictureBox2
+            // workersButton
             // 
-            this.pictureBox2.Image = global::Shubin.Properties.Resources.icons8_administrator_male_70;
-            this.pictureBox2.Location = new System.Drawing.Point(17, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(70, 71);
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
+            this.workersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.workersButton.Image = global::Shubin.Properties.Resources.WorkersWhite;
+            this.workersButton.ImageHover = global::Shubin.Properties.Resources.WorkersBlack;
+            this.workersButton.ImageNormal = global::Shubin.Properties.Resources.WorkersWhite;
+            this.workersButton.Location = new System.Drawing.Point(572, 12);
+            this.workersButton.Name = "workersButton";
+            this.workersButton.Size = new System.Drawing.Size(50, 50);
+            this.workersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.workersButton.TabIndex = 70;
+            this.workersButton.TabStop = false;
             // 
-            // deleteButton
+            // usersButton
             // 
-            this.deleteButton.Location = new System.Drawing.Point(140, 356);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(117, 46);
-            this.deleteButton.TabIndex = 28;
-            this.deleteButton.Text = "Удалить";
-            this.deleteButton.UseVisualStyleBackColor = true;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.usersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.usersButton.Image = global::Shubin.Properties.Resources.UsersWhite;
+            this.usersButton.ImageHover = global::Shubin.Properties.Resources.UsersBlack;
+            this.usersButton.ImageNormal = global::Shubin.Properties.Resources.UsersWhite;
+            this.usersButton.Location = new System.Drawing.Point(864, 12);
+            this.usersButton.Name = "usersButton";
+            this.usersButton.Size = new System.Drawing.Size(50, 50);
+            this.usersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.usersButton.TabIndex = 74;
+            this.usersButton.TabStop = false;
             // 
-            // tabPage4
+            // categoryButton
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(548, 451);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Запросы";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.categoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoryButton.Image = global::Shubin.Properties.Resources.CategoryWhite;
+            this.categoryButton.ImageHover = global::Shubin.Properties.Resources.CategoryBlack;
+            this.categoryButton.ImageNormal = global::Shubin.Properties.Resources.CategoryWhite;
+            this.categoryButton.Location = new System.Drawing.Point(760, 12);
+            this.categoryButton.Name = "categoryButton";
+            this.categoryButton.Size = new System.Drawing.Size(50, 50);
+            this.categoryButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.categoryButton.TabIndex = 71;
+            this.categoryButton.TabStop = false;
             // 
-            // tabPage5
+            // suppliersButton
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(548, 451);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Категории";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.suppliersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.suppliersButton.Image = global::Shubin.Properties.Resources.SupplierWhite;
+            this.suppliersButton.ImageHover = global::Shubin.Properties.Resources.SupplierBlack;
+            this.suppliersButton.ImageNormal = global::Shubin.Properties.Resources.SupplierWhite;
+            this.suppliersButton.Location = new System.Drawing.Point(666, 12);
+            this.suppliersButton.Name = "suppliersButton";
+            this.suppliersButton.Size = new System.Drawing.Size(50, 50);
+            this.suppliersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.suppliersButton.TabIndex = 66;
+            this.suppliersButton.TabStop = false;
+            // 
+            // requestButton
+            // 
+            this.requestButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.requestButton.Image = ((System.Drawing.Image)(resources.GetObject("requestButton.Image")));
+            this.requestButton.ImageHover = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageHover")));
+            this.requestButton.ImageNormal = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageNormal")));
+            this.requestButton.Location = new System.Drawing.Point(483, 12);
+            this.requestButton.Name = "requestButton";
+            this.requestButton.Size = new System.Drawing.Size(50, 50);
+            this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.requestButton.TabIndex = 65;
+            this.requestButton.TabStop = false;
             // 
             // Admin_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 477);
-            this.Controls.Add(this.tabControl1);
+            this.ClientSize = new System.Drawing.Size(977, 536);
+            this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_Panel";
             this.Text = "InventoryPro";
             this.Load += new System.EventHandler(this.Admin_Panel_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workersButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.suppliersButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestButton)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button saveButton;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button deleteButton;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label4;
+        private WorkerButton usersButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private WorkerButton categoryButton;
+        private WorkerButton workersButton;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private WorkerButton suppliersButton;
+        private WorkerButton requestButton;
+        private System.Windows.Forms.Label label9;
     }
 }

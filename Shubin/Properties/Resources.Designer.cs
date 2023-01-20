@@ -83,6 +83,26 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CategoryBlack {
+            get {
+                object obj = ResourceManager.GetObject("CategoryBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CategoryWhite {
+            get {
+                object obj = ResourceManager.GetObject("CategoryWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_user_male_70 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-user-male-70", resourceCulture);
@@ -203,6 +223,46 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SupplierBlack {
+            get {
+                object obj = ResourceManager.GetObject("SupplierBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SupplierWhite {
+            get {
+                object obj = ResourceManager.GetObject("SupplierWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UsersBlack {
+            get {
+                object obj = ResourceManager.GetObject("UsersBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UsersWhite {
+            get {
+                object obj = ResourceManager.GetObject("UsersWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WarehouseBlack {
             get {
                 object obj = ResourceManager.GetObject("WarehouseBlack", resourceCulture);
@@ -216,6 +276,26 @@ namespace Shubin.Properties {
         internal static System.Drawing.Bitmap WarehouseWhite {
             get {
                 object obj = ResourceManager.GetObject("WarehouseWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WorkersBlack {
+            get {
+                object obj = ResourceManager.GetObject("WorkersBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WorkersWhite {
+            get {
+                object obj = ResourceManager.GetObject("WorkersWhite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

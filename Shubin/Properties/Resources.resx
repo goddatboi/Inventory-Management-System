@@ -124,8 +124,17 @@
   <data name="WarehouseBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WarehouseBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddButtonBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddButtonBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-administrator-male-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-administrator-male-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SupplierBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SupplierBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SupplierWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SupplierWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ReturnWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ReturnWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,8 +154,8 @@
   <data name="icons8-user-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-user-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ReturnBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ReturnBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CategoryBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CategoryBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-add-user-male-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-add-user-male-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,13 +166,28 @@
   <data name="icons8-note-50" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-note-50.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="WorkersBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WorkersBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WorkersWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WorkersWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="RequestWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RequestWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CategoryWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CategoryWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UsersWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsersWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="AddButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\AddButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AddButtonBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddButtonBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ReturnBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReturnBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UsersBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsersBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
