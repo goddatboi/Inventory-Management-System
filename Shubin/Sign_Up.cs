@@ -59,7 +59,18 @@ namespace Shubin
 
             if (checkUser())
             {
-                return;
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log_In loginForm = new Log_In();
+                    this.Hide();
+                    loginForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Аккаунт не создан!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dataBase.closeConnection();
             }
 
             if (rowsAffected > 0)

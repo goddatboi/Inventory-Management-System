@@ -67,12 +67,25 @@
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.updateButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.requestdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.qtynumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.clearButton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.workercomboBox = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.nametextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -83,33 +96,20 @@
             this.label12 = new System.Windows.Forms.Label();
             this.returnButton = new Shubin.WorkerButton();
             this.requestButton = new Shubin.WorkerButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.requestdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
-            this.qtynumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.workercomboBox = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.nametextBox = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qtynumericUpDown)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.returnButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qtynumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -438,10 +438,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(453, 225);
+            this.tabControl1.Location = new System.Drawing.Point(43, 134);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(642, 286);
+            this.tabControl1.Size = new System.Drawing.Size(1057, 438);
             this.tabControl1.TabIndex = 60;
             // 
             // tabPage1
@@ -467,10 +467,20 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(634, 260);
+            this.tabPage1.Size = new System.Drawing.Size(1049, 412);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Инвентарь";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(1016, 320);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 42);
+            this.button2.TabIndex = 104;
+            this.button2.Text = "Отмена";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // updateButton
             // 
@@ -482,6 +492,32 @@
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(857, 320);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 42);
+            this.button1.TabIndex = 103;
+            this.button1.Text = "Отправить запрос";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(50, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox1.TabIndex = 65;
+            this.pictureBox1.TabStop = false;
+            // 
+            // requestdateTimePicker
+            // 
+            this.requestdateTimePicker.Enabled = false;
+            this.requestdateTimePicker.Location = new System.Drawing.Point(937, 253);
+            this.requestdateTimePicker.Name = "requestdateTimePicker";
+            this.requestdateTimePicker.Size = new System.Drawing.Size(212, 20);
+            this.requestdateTimePicker.TabIndex = 102;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -491,6 +527,16 @@
             this.label8.Size = new System.Drawing.Size(155, 17);
             this.label8.TabIndex = 64;
             this.label8.Text = "Управление записями";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(854, 279);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 16);
+            this.label10.TabIndex = 101;
+            this.label10.Text = "Работник:";
             // 
             // groupBox2
             // 
@@ -503,6 +549,13 @@
             this.groupBox2.Size = new System.Drawing.Size(129, 225);
             this.groupBox2.TabIndex = 63;
             this.groupBox2.TabStop = false;
+            // 
+            // qtynumericUpDown
+            // 
+            this.qtynumericUpDown.Location = new System.Drawing.Point(937, 227);
+            this.qtynumericUpDown.Name = "qtynumericUpDown";
+            this.qtynumericUpDown.Size = new System.Drawing.Size(212, 20);
+            this.qtynumericUpDown.TabIndex = 100;
             // 
             // groupBox1
             // 
@@ -540,6 +593,14 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(6, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.TabIndex = 61;
+            this.pictureBox2.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -549,13 +610,70 @@
             this.label1.TabIndex = 60;
             this.label1.Text = "Запись:";
             // 
+            // workercomboBox
+            // 
+            this.workercomboBox.DisplayMember = "Work_Fam";
+            this.workercomboBox.FormattingEnabled = true;
+            this.workercomboBox.Location = new System.Drawing.Point(937, 279);
+            this.workercomboBox.Name = "workercomboBox";
+            this.workercomboBox.Size = new System.Drawing.Size(212, 21);
+            this.workercomboBox.TabIndex = 99;
+            this.workercomboBox.ValueMember = "Work_ID";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(854, 253);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(46, 16);
+            this.label11.TabIndex = 98;
+            this.label11.Text = "Дата:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(854, 227);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 16);
+            this.label14.TabIndex = 97;
+            this.label14.Text = "Кол-во:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(903, 173);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(206, 18);
+            this.label16.TabIndex = 94;
+            this.label16.Text = "Оформление запроса";
+            // 
+            // nametextBox
+            // 
+            this.nametextBox.Location = new System.Drawing.Point(937, 201);
+            this.nametextBox.Name = "nametextBox";
+            this.nametextBox.Size = new System.Drawing.Size(212, 20);
+            this.nametextBox.TabIndex = 96;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(854, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 16);
+            this.label15.TabIndex = 95;
+            this.label15.Text = "Название:";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(969, 581);
+            this.tabPage2.Size = new System.Drawing.Size(929, 412);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Запрос";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -575,7 +693,7 @@
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(969, 581);
+            this.tabPage3.Size = new System.Drawing.Size(929, 412);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Возврат";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -651,124 +769,6 @@
             this.requestButton.TabStop = false;
             this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
-            this.pictureBox1.TabIndex = 65;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(6, 17);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
-            this.pictureBox2.TabIndex = 61;
-            this.pictureBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(1016, 320);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 42);
-            this.button2.TabIndex = 104;
-            this.button2.Text = "Отмена";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(857, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 42);
-            this.button1.TabIndex = 103;
-            this.button1.Text = "Отправить запрос";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // requestdateTimePicker
-            // 
-            this.requestdateTimePicker.Enabled = false;
-            this.requestdateTimePicker.Location = new System.Drawing.Point(937, 253);
-            this.requestdateTimePicker.Name = "requestdateTimePicker";
-            this.requestdateTimePicker.Size = new System.Drawing.Size(212, 20);
-            this.requestdateTimePicker.TabIndex = 102;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(854, 279);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 16);
-            this.label10.TabIndex = 101;
-            this.label10.Text = "Работник:";
-            // 
-            // qtynumericUpDown
-            // 
-            this.qtynumericUpDown.Location = new System.Drawing.Point(937, 227);
-            this.qtynumericUpDown.Name = "qtynumericUpDown";
-            this.qtynumericUpDown.Size = new System.Drawing.Size(212, 20);
-            this.qtynumericUpDown.TabIndex = 100;
-            // 
-            // workercomboBox
-            // 
-            this.workercomboBox.DisplayMember = "Work_Fam";
-            this.workercomboBox.FormattingEnabled = true;
-            this.workercomboBox.Location = new System.Drawing.Point(937, 279);
-            this.workercomboBox.Name = "workercomboBox";
-            this.workercomboBox.Size = new System.Drawing.Size(212, 21);
-            this.workercomboBox.TabIndex = 99;
-            this.workercomboBox.ValueMember = "Work_ID";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(854, 253);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 16);
-            this.label11.TabIndex = 98;
-            this.label11.Text = "Дата:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(854, 227);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 16);
-            this.label14.TabIndex = 97;
-            this.label14.Text = "Кол-во:";
-            // 
-            // nametextBox
-            // 
-            this.nametextBox.Location = new System.Drawing.Point(937, 201);
-            this.nametextBox.Name = "nametextBox";
-            this.nametextBox.Size = new System.Drawing.Size(212, 20);
-            this.nametextBox.TabIndex = 96;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.Location = new System.Drawing.Point(854, 201);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(77, 16);
-            this.label15.TabIndex = 95;
-            this.label15.Text = "Название:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.Location = new System.Drawing.Point(903, 173);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(206, 18);
-            this.label16.TabIndex = 94;
-            this.label16.Text = "Оформление запроса";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -789,18 +789,18 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qtynumericUpDown)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.returnButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qtynumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

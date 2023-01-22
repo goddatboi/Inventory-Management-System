@@ -72,12 +72,6 @@ namespace Shubin
                 }
             }
             LoadRequests();
-
-        }
-
-        private void DGV_Requests_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-
         }
     }
 }

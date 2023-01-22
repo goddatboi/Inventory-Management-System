@@ -46,25 +46,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manage_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Inventory.Designer.cs">
+      <DependentUpon>Manage_Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin_Panel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_Panel.Designer.cs">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Categories.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Categories.Designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
-    </Compile>
     <Compile Include="checkUserAccess.cs" />
     <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory.Designer.cs">
+      <DependentUpon>Inventory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Make_Request.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Make_Request.Designer.cs">
       <DependentUpon>Make_Request.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Worker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Worker.Designer.cs">
+      <DependentUpon>Manage_Worker.cs</DependentUpon>
     </Compile>
     <Compile Include="Requests.cs">
       <SubType>Form</SubType>
@@ -135,17 +147,23 @@
     <Compile Include="Workers.Designer.cs">
       <DependentUpon>Workers.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Manage_Inventory.resx">
+      <DependentUpon>Manage_Inventory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin_Panel.resx">
       <DependentUpon>Admin_Panel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <EmbeddedResource Include="Inventory.resx">
+      <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Log_In.resx">
       <DependentUpon>Log_In.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Make_Request.resx">
       <DependentUpon>Make_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Worker.resx">
+      <DependentUpon>Manage_Worker.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Requests.resx">
       <DependentUpon>Requests.cs</DependentUpon>

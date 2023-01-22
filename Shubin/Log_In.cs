@@ -11,6 +11,7 @@ using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms.VisualStyles;
 using static Shubin.Program;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Shubin
 {
@@ -93,6 +94,11 @@ namespace Shubin
             this.Hide();
             registerForm.ShowDialog();
             this.Show();
+        }
+
+        private void loginButton_MouseEnter(object sender, EventArgs e)
+        {
+            
         }
     }
 }
