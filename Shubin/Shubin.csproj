@@ -72,6 +72,12 @@
     <Compile Include="Make_Request.Designer.cs">
       <DependentUpon>Make_Request.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Supplier.Designer.cs">
+      <DependentUpon>Manage_Supplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage_Worker.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Make_Request.resx">
       <DependentUpon>Make_Request.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Supplier.resx">
+      <DependentUpon>Manage_Supplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Worker.resx">
       <DependentUpon>Manage_Worker.cs</DependentUpon>

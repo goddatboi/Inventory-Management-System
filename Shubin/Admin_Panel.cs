@@ -59,5 +59,10 @@ namespace Shubin
         {
             openChildForm(new Inventory());
         }
+
+        private void suppliersButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Suppliers());
+        }
     }
 }

@@ -31,9 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.DGV_Inventory = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.addButton = new Shubin.WorkerButton();
-            this.searchtextBox = new System.Windows.Forms.TextBox();
             this.Inv_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +39,11 @@
             this.Inv_Supplier_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Location = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Inv_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.searchtextBox = new System.Windows.Forms.TextBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.addButton = new Shubin.WorkerButton();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Inventory)).BeginInit();
@@ -82,38 +84,6 @@
             this.DGV_Inventory.Size = new System.Drawing.Size(972, 450);
             this.DGV_Inventory.TabIndex = 2;
             this.DGV_Inventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Inventory_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.addButton);
-            this.panel1.Controls.Add(this.searchtextBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 405);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(972, 45);
-            this.panel1.TabIndex = 4;
-            // 
-            // addButton
-            // 
-            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.Image = global::Shubin.Properties.Resources.AddButton;
-            this.addButton.ImageHover = global::Shubin.Properties.Resources.AddButtonBlack;
-            this.addButton.ImageNormal = global::Shubin.Properties.Resources.AddButton;
-            this.addButton.Location = new System.Drawing.Point(930, 3);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(30, 30);
-            this.addButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.addButton.TabIndex = 77;
-            this.addButton.TabStop = false;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
-            // searchtextBox
-            // 
-            this.searchtextBox.Location = new System.Drawing.Point(12, 13);
-            this.searchtextBox.Name = "searchtextBox";
-            this.searchtextBox.Size = new System.Drawing.Size(205, 20);
-            this.searchtextBox.TabIndex = 0;
             // 
             // Inv_ID
             // 
@@ -175,6 +145,54 @@
             this.Inv_Status.Name = "Inv_Status";
             this.Inv_Status.Width = 73;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.addButton);
+            this.panel1.Controls.Add(this.searchtextBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 405);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(972, 45);
+            this.panel1.TabIndex = 4;
+            // 
+            // searchtextBox
+            // 
+            this.searchtextBox.Location = new System.Drawing.Point(12, 13);
+            this.searchtextBox.Name = "searchtextBox";
+            this.searchtextBox.Size = new System.Drawing.Size(205, 20);
+            this.searchtextBox.TabIndex = 0;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 5;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 5;
+            // 
+            // addButton
+            // 
+            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addButton.Image = global::Shubin.Properties.Resources.AddButton;
+            this.addButton.ImageHover = global::Shubin.Properties.Resources.AddButtonBlack;
+            this.addButton.ImageNormal = global::Shubin.Properties.Resources.AddButton;
+            this.addButton.Location = new System.Drawing.Point(223, 3);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(30, 30);
+            this.addButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.addButton.TabIndex = 77;
+            this.addButton.TabStop = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -226,5 +244,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Status;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
