@@ -53,7 +53,7 @@ namespace Shubin
             if (colName == "Edit")
             {
                 Manage_Inventory manageInvForm = new Manage_Inventory();
-                manageInvForm.idtextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[0].Value.ToString();
+                //manageInvForm.idtextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[0].Value.ToString();
                 manageInvForm.nametextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[1].Value.ToString();
                 manageInvForm.qtynumericUpDown.Text = DGV_Inventory.Rows[e.RowIndex].Cells[2].Value.ToString();
                 manageInvForm.pricetextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -62,7 +62,7 @@ namespace Shubin
                 manageInvForm.locationtextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[6].Value.ToString();
                 manageInvForm.statustextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[7].Value.ToString();
 
-                manageInvForm.idtextBox.Enabled = false;
+                //manageInvForm.idtextBox.Enabled = false;
                 manageInvForm.savebutton.Enabled = false;
                 manageInvForm.updatebutton.Enabled = true;
                 manageInvForm.ShowDialog();

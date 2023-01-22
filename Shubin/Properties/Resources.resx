@@ -121,6 +121,9 @@
   <data name="ReturnBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ReturnBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AdminWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WorkersWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WorkersWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -148,9 +151,6 @@
   <data name="icons8-user-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-user-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-broom-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-broom-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="UsersBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UsersBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +160,9 @@
   <data name="Edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="UsersWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsersWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icons8-administrator-male-70" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-administrator-male-70.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +171,9 @@
   </data>
   <data name="WarehouseWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WarehouseWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReturnSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ReturnSmall.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,14 +187,20 @@
   <data name="HistoryWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HistoryWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="HistoryBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\HistoryBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CategoryBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CategoryBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UsersWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UsersWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icons8-broom-30" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-broom-30.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SupplierWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SupplierWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdminBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AdminBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icons8-search-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-search-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +217,7 @@
   <data name="SupplierBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SupplierBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HistoryBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\HistoryBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

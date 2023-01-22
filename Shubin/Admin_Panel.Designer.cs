@@ -38,24 +38,24 @@
             this.информацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.inventoryButton = new Shubin.WorkerButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.workersButton = new Shubin.WorkerButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.suppliersButton = new Shubin.WorkerButton();
+            this.requestButton = new Shubin.WorkerButton();
             this.adminMain_Panel = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.inventoryButton = new Shubin.WorkerButton();
-            this.workersButton = new Shubin.WorkerButton();
-            this.suppliersButton = new Shubin.WorkerButton();
-            this.requestButton = new Shubin.WorkerButton();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.adminMain_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).BeginInit();
+            this.adminMain_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,7 +74,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(977, 113);
+            this.panel1.Size = new System.Drawing.Size(864, 113);
             this.panel1.TabIndex = 69;
             // 
             // menuStrip1
@@ -85,7 +85,7 @@
             this.информацияToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(977, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(864, 24);
             this.menuStrip1.TabIndex = 78;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -134,11 +134,25 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(620, 83);
+            this.label1.Location = new System.Drawing.Point(511, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 14);
             this.label1.TabIndex = 77;
             this.label1.Text = "Инвентарь";
+            // 
+            // inventoryButton
+            // 
+            this.inventoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inventoryButton.Image = global::Shubin.Properties.Resources.WarehouseWhite;
+            this.inventoryButton.ImageHover = global::Shubin.Properties.Resources.WarehouseBlack;
+            this.inventoryButton.ImageNormal = global::Shubin.Properties.Resources.WarehouseWhite;
+            this.inventoryButton.Location = new System.Drawing.Point(525, 30);
+            this.inventoryButton.Name = "inventoryButton";
+            this.inventoryButton.Size = new System.Drawing.Size(50, 50);
+            this.inventoryButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.inventoryButton.TabIndex = 76;
+            this.inventoryButton.TabStop = false;
+            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
             // 
             // label9
             // 
@@ -150,11 +164,25 @@
             this.label9.TabIndex = 70;
             this.label9.Text = "Панель администратора";
             // 
+            // workersButton
+            // 
+            this.workersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.workersButton.Image = global::Shubin.Properties.Resources.WorkersWhite;
+            this.workersButton.ImageHover = global::Shubin.Properties.Resources.WorkersBlack;
+            this.workersButton.ImageNormal = global::Shubin.Properties.Resources.WorkersWhite;
+            this.workersButton.Location = new System.Drawing.Point(687, 30);
+            this.workersButton.Name = "workersButton";
+            this.workersButton.Size = new System.Drawing.Size(50, 50);
+            this.workersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.workersButton.TabIndex = 70;
+            this.workersButton.TabStop = false;
+            this.workersButton.Click += new System.EventHandler(this.workersButton_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(782, 83);
+            this.label3.Location = new System.Drawing.Point(673, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 14);
             this.label3.TabIndex = 72;
@@ -164,7 +192,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(869, 83);
+            this.label13.Location = new System.Drawing.Point(754, 83);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(92, 14);
             this.label13.TabIndex = 69;
@@ -174,11 +202,39 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(708, 83);
+            this.label12.Location = new System.Drawing.Point(599, 83);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 14);
             this.label12.TabIndex = 68;
             this.label12.Text = "Запросы";
+            // 
+            // suppliersButton
+            // 
+            this.suppliersButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.suppliersButton.Image = global::Shubin.Properties.Resources.SupplierWhite;
+            this.suppliersButton.ImageHover = global::Shubin.Properties.Resources.SupplierBlack;
+            this.suppliersButton.ImageNormal = global::Shubin.Properties.Resources.SupplierWhite;
+            this.suppliersButton.Location = new System.Drawing.Point(775, 30);
+            this.suppliersButton.Name = "suppliersButton";
+            this.suppliersButton.Size = new System.Drawing.Size(50, 50);
+            this.suppliersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.suppliersButton.TabIndex = 66;
+            this.suppliersButton.TabStop = false;
+            this.suppliersButton.Click += new System.EventHandler(this.suppliersButton_Click);
+            // 
+            // requestButton
+            // 
+            this.requestButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.requestButton.Image = ((System.Drawing.Image)(resources.GetObject("requestButton.Image")));
+            this.requestButton.ImageHover = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageHover")));
+            this.requestButton.ImageNormal = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageNormal")));
+            this.requestButton.Location = new System.Drawing.Point(607, 30);
+            this.requestButton.Name = "requestButton";
+            this.requestButton.Size = new System.Drawing.Size(50, 50);
+            this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.requestButton.TabIndex = 65;
+            this.requestButton.TabStop = false;
+            this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
             // 
             // adminMain_Panel
             // 
@@ -188,7 +244,7 @@
             this.adminMain_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.adminMain_Panel.Location = new System.Drawing.Point(0, 113);
             this.adminMain_Panel.Name = "adminMain_Panel";
-            this.adminMain_Panel.Size = new System.Drawing.Size(977, 423);
+            this.adminMain_Panel.Size = new System.Drawing.Size(864, 418);
             this.adminMain_Panel.TabIndex = 70;
             // 
             // label10
@@ -211,67 +267,11 @@
             this.label2.TabIndex = 67;
             this.label2.Text = "Система учета инвентаря";
             // 
-            // inventoryButton
-            // 
-            this.inventoryButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.inventoryButton.Image = global::Shubin.Properties.Resources.WarehouseWhite;
-            this.inventoryButton.ImageHover = global::Shubin.Properties.Resources.WarehouseBlack;
-            this.inventoryButton.ImageNormal = global::Shubin.Properties.Resources.WarehouseWhite;
-            this.inventoryButton.Location = new System.Drawing.Point(634, 30);
-            this.inventoryButton.Name = "inventoryButton";
-            this.inventoryButton.Size = new System.Drawing.Size(50, 50);
-            this.inventoryButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.inventoryButton.TabIndex = 76;
-            this.inventoryButton.TabStop = false;
-            this.inventoryButton.Click += new System.EventHandler(this.inventoryButton_Click);
-            // 
-            // workersButton
-            // 
-            this.workersButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.workersButton.Image = global::Shubin.Properties.Resources.WorkersWhite;
-            this.workersButton.ImageHover = global::Shubin.Properties.Resources.WorkersBlack;
-            this.workersButton.ImageNormal = global::Shubin.Properties.Resources.WorkersWhite;
-            this.workersButton.Location = new System.Drawing.Point(796, 30);
-            this.workersButton.Name = "workersButton";
-            this.workersButton.Size = new System.Drawing.Size(50, 50);
-            this.workersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.workersButton.TabIndex = 70;
-            this.workersButton.TabStop = false;
-            this.workersButton.Click += new System.EventHandler(this.workersButton_Click);
-            // 
-            // suppliersButton
-            // 
-            this.suppliersButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.suppliersButton.Image = global::Shubin.Properties.Resources.SupplierWhite;
-            this.suppliersButton.ImageHover = global::Shubin.Properties.Resources.SupplierBlack;
-            this.suppliersButton.ImageNormal = global::Shubin.Properties.Resources.SupplierWhite;
-            this.suppliersButton.Location = new System.Drawing.Point(890, 30);
-            this.suppliersButton.Name = "suppliersButton";
-            this.suppliersButton.Size = new System.Drawing.Size(50, 50);
-            this.suppliersButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.suppliersButton.TabIndex = 66;
-            this.suppliersButton.TabStop = false;
-            this.suppliersButton.Click += new System.EventHandler(this.suppliersButton_Click);
-            // 
-            // requestButton
-            // 
-            this.requestButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.requestButton.Image = ((System.Drawing.Image)(resources.GetObject("requestButton.Image")));
-            this.requestButton.ImageHover = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageHover")));
-            this.requestButton.ImageNormal = ((System.Drawing.Image)(resources.GetObject("requestButton.ImageNormal")));
-            this.requestButton.Location = new System.Drawing.Point(716, 30);
-            this.requestButton.Name = "requestButton";
-            this.requestButton.Size = new System.Drawing.Size(50, 50);
-            this.requestButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.requestButton.TabIndex = 65;
-            this.requestButton.TabStop = false;
-            this.requestButton.Click += new System.EventHandler(this.requestButton_Click);
-            // 
             // Admin_Panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 536);
+            this.ClientSize = new System.Drawing.Size(864, 531);
             this.Controls.Add(this.adminMain_Panel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -282,12 +282,12 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.adminMain_Panel.ResumeLayout(false);
-            this.adminMain_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workersButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.suppliersButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestButton)).EndInit();
+            this.adminMain_Panel.ResumeLayout(false);
+            this.adminMain_Panel.PerformLayout();
             this.ResumeLayout(false);
 
         }

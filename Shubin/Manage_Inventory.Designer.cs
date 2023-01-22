@@ -44,12 +44,11 @@
             this.savebutton = new System.Windows.Forms.Button();
             this.purchdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.qtynumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.clearbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pricetextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.supcomboBox = new System.Windows.Forms.ComboBox();
-            this.idtextBox = new System.Windows.Forms.TextBox();
+            this.clearbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtynumericUpDown)).BeginInit();
             this.panel2.SuspendLayout();
@@ -203,19 +202,6 @@
             this.qtynumericUpDown.Size = new System.Drawing.Size(206, 20);
             this.qtynumericUpDown.TabIndex = 106;
             // 
-            // clearbutton
-            // 
-            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
-            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
-            this.clearbutton.Location = new System.Drawing.Point(20, 274);
-            this.clearbutton.Name = "clearbutton";
-            this.clearbutton.Size = new System.Drawing.Size(42, 39);
-            this.clearbutton.TabIndex = 107;
-            this.clearbutton.UseVisualStyleBackColor = false;
-            this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -237,7 +223,6 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
-            this.panel2.Controls.Add(this.idtextBox);
             this.panel2.Controls.Add(this.supcomboBox);
             this.panel2.Controls.Add(this.purchdateTimePicker);
             this.panel2.Controls.Add(this.label1);
@@ -269,12 +254,18 @@
             this.supcomboBox.Size = new System.Drawing.Size(206, 21);
             this.supcomboBox.TabIndex = 110;
             // 
-            // idtextBox
+            // clearbutton
             // 
-            this.idtextBox.Location = new System.Drawing.Point(100, 16);
-            this.idtextBox.Name = "idtextBox";
-            this.idtextBox.Size = new System.Drawing.Size(28, 20);
-            this.idtextBox.TabIndex = 111;
+            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
+            this.clearbutton.Location = new System.Drawing.Point(20, 274);
+            this.clearbutton.Name = "clearbutton";
+            this.clearbutton.Size = new System.Drawing.Size(42, 39);
+            this.clearbutton.TabIndex = 107;
+            this.clearbutton.UseVisualStyleBackColor = false;
+            this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
             // Manage_Inventory
             // 
@@ -317,6 +308,5 @@
         public System.Windows.Forms.DateTimePicker purchdateTimePicker;
         public System.Windows.Forms.NumericUpDown qtynumericUpDown;
         public System.Windows.Forms.ComboBox supcomboBox;
-        public System.Windows.Forms.TextBox idtextBox;
     }
 }

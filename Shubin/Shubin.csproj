@@ -96,17 +96,17 @@
     <Compile Include="Request_Item.Designer.cs">
       <DependentUpon>Request_Item.cs</DependentUpon>
     </Compile>
-    <Compile Include="Return_Item.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Return_Item.Designer.cs">
-      <DependentUpon>Return_Item.cs</DependentUpon>
-    </Compile>
     <Compile Include="Suppliers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Suppliers.Designer.cs">
       <DependentUpon>Suppliers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Inventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Inventory.Designer.cs">
+      <DependentUpon>User_Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="User_Panel.cs">
       <SubType>Form</SubType>
@@ -192,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="Sign_Up.resx">
       <DependentUpon>Sign_Up.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Inventory.resx">
+      <DependentUpon>User_Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User_Panel.resx">
       <DependentUpon>User_Panel.cs</DependentUpon>
@@ -286,6 +289,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\HistoryBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdminWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AdminBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ReturnSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fix.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -93,6 +93,26 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AdminBlack {
+            get {
+                object obj = ResourceManager.GetObject("AdminBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap AdminWhite {
+            get {
+                object obj = ResourceManager.GetObject("AdminWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CategoryBlack {
             get {
                 object obj = ResourceManager.GetObject("CategoryBlack", resourceCulture);
@@ -136,6 +156,16 @@ namespace Shubin.Properties {
         internal static System.Drawing.Bitmap Edit {
             get {
                 object obj = ResourceManager.GetObject("Edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fix {
+            get {
+                object obj = ResourceManager.GetObject("Fix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +296,16 @@ namespace Shubin.Properties {
         internal static System.Drawing.Bitmap ReturnBlack {
             get {
                 object obj = ResourceManager.GetObject("ReturnBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ReturnSmall {
+            get {
+                object obj = ResourceManager.GetObject("ReturnSmall", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

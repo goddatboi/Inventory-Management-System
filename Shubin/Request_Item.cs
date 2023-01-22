@@ -41,7 +41,7 @@ namespace Shubin
             while (DR.Read())
             {
                 i++;
-                DGV_Inventory.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString());
+                DGV_Inventory.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString());
             }
             DR.Close();
             dataBase.closeConnection();
@@ -62,11 +62,11 @@ namespace Shubin
                 makeReqForm.nameTextBox.Text = DGV_Inventory.Rows[e.RowIndex].Cells[1].Value.ToString();
                 makeReqForm.qtyUpDown.Text = DGV_Inventory.Rows[e.RowIndex].Cells[2].Value.ToString();
                 makeReqForm.workertextBox.Text = Convert.ToString(command.ExecuteScalar());
-                dataBase.closeConnection();
                 makeReqForm.IDtextBox.Enabled = false;
                 makeReqForm.workertextBox.Enabled = false;
                 makeReqForm.nameTextBox.Enabled = false;
                 makeReqForm.dateTimePicker.Enabled = false;
+                dataBase.closeConnection();
                 makeReqForm.ShowDialog();
             }
             LoadInventory();

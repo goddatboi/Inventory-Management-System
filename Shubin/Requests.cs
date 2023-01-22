@@ -64,9 +64,10 @@ namespace Shubin
                 moveCommand.Parameters.AddWithValue("@Move_Status", "Одобрено");
                 moveCommand.ExecuteNonQuery();
 
-                var statusQuery = "INSERT INTO InventoryStatus (St_Inv_ID, St_UpdateDate, St_Quantity, St_Status, St_RespWorker) VALUES (@St_Inv_ID, @St_UpdateDate, @St_Quantity, @St_Status, @St_RespWorker)";
+                var statusQuery = "INSERT INTO InventoryStatus (St_Inv_ID, St_Inv_Name, St_UpdateDate, St_Quantity, St_Status, St_RespWorker) VALUES (@St_Inv_ID, @St_Inv_Name, @St_UpdateDate, @St_Quantity, @St_Status, @St_RespWorker)";
                 var statusCommand = new SqlCommand(statusQuery, dataBase.getConnection());
                 statusCommand.Parameters.AddWithValue("@St_Inv_ID", DGV_Requests.Rows[e.RowIndex].Cells[4].Value.ToString());
+                statusCommand.Parameters.AddWithValue("@St_Inv_Name", DGV_Requests.Rows[e.RowIndex].Cells[1].Value.ToString());
                 statusCommand.Parameters.AddWithValue("@St_UpdateDate", DGV_Requests.Rows[e.RowIndex].Cells[5].Value.ToString());
                 statusCommand.Parameters.AddWithValue("@St_Quantity", DGV_Requests.Rows[e.RowIndex].Cells[2].Value.ToString());
                 statusCommand.Parameters.AddWithValue("@St_Status", "Одобрено");

@@ -126,6 +126,7 @@
             // sendreqbutton
             // 
             this.sendreqbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.sendreqbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sendreqbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendreqbutton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sendreqbutton.Location = new System.Drawing.Point(63, 242);
@@ -139,6 +140,7 @@
             // cancelreqbutton
             // 
             this.cancelreqbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.cancelreqbutton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cancelreqbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelreqbutton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cancelreqbutton.Location = new System.Drawing.Point(189, 242);

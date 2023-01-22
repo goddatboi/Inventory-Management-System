@@ -29,9 +29,7 @@ namespace Shubin
         private void sendreqbutton_Click(object sender, EventArgs e)
         {
             dataBase.openConnection();
-
             command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
-
             var name = nameTextBox.Text;
             var qty = qtyUpDown.Text;
             var worker = Convert.ToInt32(command.ExecuteScalar());
@@ -59,7 +57,7 @@ namespace Shubin
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Запрос успешно отправлен!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    var updateQuery = $"UPDATE InventoryItems SET Inv_Quantity = Inv_Quantity - {qty} WHERE Inv_ID = '{invid}'";
+                    var updateQuery = $"UPDATE InventoryItems SET Inv_Quantity = Inv_Quantity - {Convert.ToInt32(qty)} WHERE Inv_ID = '{Convert.ToInt32(invid)}'";
                     var updateCommand = new SqlCommand(updateQuery, dataBase.getConnection());
                     updateCommand.ExecuteNonQuery();
                     this.Hide();

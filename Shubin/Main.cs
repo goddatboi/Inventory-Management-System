@@ -78,7 +78,7 @@ namespace Shubin
         {
             DGW.Rows.Clear();
 
-            string searchString = $"select * from InventoryItems where concat (Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Worker_ID, Inv_Supplier_ID, Inv_Location, Inv_Status) like '%" + textBox_Search.Text + "%'";
+            string searchString = $"select * from InventoryItems where concat (Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location, Inv_Status) like '%" + textBox_Search.Text + "%'";
 
             SqlCommand command = new SqlCommand(searchString, dataBase.getConnection());
 

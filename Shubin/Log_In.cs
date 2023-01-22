@@ -68,15 +68,17 @@ namespace Shubin
                 if (isAdmin)
                 {
                     MessageBox.Show("Вы успешно вошли как Администратор!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Admin_Panel adminForm = new Admin_Panel();
+                    User_Panel userForm = new User_Panel();
                     this.Hide();
-                    adminForm.ShowDialog();
-                    adminForm.Dispose();
+                    userForm.ShowDialog();
+                    userForm.Dispose();
                 }
                 else
                 {
                     MessageBox.Show("Вы успешно вошли как Пользователь!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     User_Panel userForm = new User_Panel();
+                    userForm.adminButton.Visible = false;
+                    userForm.label4.Visible = false;
                     this.Hide();
                     userForm.ShowDialog();
                     userForm.Dispose();

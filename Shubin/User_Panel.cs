@@ -47,11 +47,6 @@ namespace Shubin
             openChildForm(new Request_Item());
         }
 
-        private void returnButton_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Return_Item());
-        }
-
         private void сменитьПользователяToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сменить пользователя?", "Изменение пользователя", MessageBoxButtons.YesNo);
@@ -87,12 +82,20 @@ namespace Shubin
 
         private void myinventoryButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new User_Inventory());
         }
 
         private void historyButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            Admin_Panel adminForm = new Admin_Panel();
+            this.Hide();
+            adminForm.ShowDialog();
+            this.Show();
         }
     }
 }
