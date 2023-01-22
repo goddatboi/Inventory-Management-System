@@ -43,7 +43,6 @@
             this.workertextBox = new System.Windows.Forms.TextBox();
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.clearbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyUpDown)).BeginInit();
             this.SuspendLayout();
@@ -184,25 +183,12 @@
             this.label5.TabIndex = 85;
             this.label5.Text = "Код:";
             // 
-            // clearbutton
-            // 
-            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
-            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
-            this.clearbutton.Location = new System.Drawing.Point(7, 242);
-            this.clearbutton.Name = "clearbutton";
-            this.clearbutton.Size = new System.Drawing.Size(42, 39);
-            this.clearbutton.TabIndex = 108;
-            this.clearbutton.UseVisualStyleBackColor = false;
-            // 
             // Make_Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
             this.ClientSize = new System.Drawing.Size(326, 295);
-            this.Controls.Add(this.clearbutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.label4);
@@ -244,6 +230,5 @@
         public System.Windows.Forms.TextBox workertextBox;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox IDtextBox;
-        private System.Windows.Forms.Button clearbutton;
     }
 }

@@ -81,16 +81,21 @@ namespace Shubin
             }
             else if (colName == "Deny")
             {
-                if (Convert.ToString(DGV_Requests.Rows[e.RowIndex].Cells["Req_Status"].Value) == "Одобрено")
-                {
-                    MessageBox.Show("Невозможно отказать в запросе инвентаря, так как он уже одобрен", "Отказ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (MessageBox.Show("Вы уверены, что хотите отказать в запросе инвентаря", "Отказ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Вы уверены, что хотите отказать в запросе инвентаря", "Отказ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     dataBase.openConnection();
+
+                    string id = DGV_Requests.Rows[e.RowIndex].Cells["Req_Inv_ID"].Value.ToString();
+                    var returnbackQuery = $"UPDATE InventoryItems SET Inv_Quantity = Inv_Quantity + @Req_Quantity WHERE Inv_ID = {id}";
+                    var returnbackCommand = new SqlCommand(returnbackQuery, dataBase.getConnection());
+                    returnbackCommand.Parameters.AddWithValue("@Req_Quantity", Convert.ToInt32(DGV_Requests.Rows[e.RowIndex].Cells["Req_Quantity"].Value));
+                    returnbackCommand.ExecuteNonQuery();
+
                     var deleteQuery = "DELETE FROM Requests WHERE Req_ID = " + DGV_Requests.Rows[e.RowIndex].Cells["Req_ID"].Value;
                     var deleteCommand = new SqlCommand(deleteQuery, dataBase.getConnection());
                     deleteCommand.ExecuteNonQuery();
+                    MessageBox.Show("Запрос успешно отклонён");
+
                     dataBase.closeConnection();
                 }
             }
