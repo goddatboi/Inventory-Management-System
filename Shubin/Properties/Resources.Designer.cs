@@ -143,6 +143,26 @@ namespace Shubin.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HistoryBlack {
+            get {
+                object obj = ResourceManager.GetObject("HistoryBlack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HistoryWhite {
+            get {
+                object obj = ResourceManager.GetObject("HistoryWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_add_user_male_70 {
             get {
                 object obj = ResourceManager.GetObject("icons8-add-user-male-70", resourceCulture);

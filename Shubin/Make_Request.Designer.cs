@@ -43,25 +43,26 @@
             this.workertextBox = new System.Windows.Forms.TextBox();
             this.IDtextBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.clearbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qtyUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(325, 45);
+            this.panel1.Size = new System.Drawing.Size(326, 45);
             this.panel1.TabIndex = 71;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(12, 9);
+            this.label9.Location = new System.Drawing.Point(59, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(210, 23);
             this.label9.TabIndex = 69;
@@ -77,6 +78,11 @@
             // qtyUpDown
             // 
             this.qtyUpDown.Location = new System.Drawing.Point(103, 133);
+            this.qtyUpDown.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
             this.qtyUpDown.Name = "qtyUpDown";
             this.qtyUpDown.Size = new System.Drawing.Size(206, 20);
             this.qtyUpDown.TabIndex = 73;
@@ -104,9 +110,9 @@
             this.label2.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.Location = new System.Drawing.Point(12, 133);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 16);
+            this.label2.Size = new System.Drawing.Size(92, 16);
             this.label2.TabIndex = 77;
-            this.label2.Text = "Кол-во:";
+            this.label2.Text = "Количество:";
             // 
             // label3
             // 
@@ -120,24 +126,28 @@
             // 
             // sendreqbutton
             // 
+            this.sendreqbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.sendreqbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sendreqbutton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.sendreqbutton.Location = new System.Drawing.Point(63, 242);
             this.sendreqbutton.Name = "sendreqbutton";
             this.sendreqbutton.Size = new System.Drawing.Size(120, 39);
             this.sendreqbutton.TabIndex = 80;
             this.sendreqbutton.Text = "Отправить запрос";
-            this.sendreqbutton.UseVisualStyleBackColor = true;
+            this.sendreqbutton.UseVisualStyleBackColor = false;
             this.sendreqbutton.Click += new System.EventHandler(this.sendreqbutton_Click);
             // 
             // cancelreqbutton
             // 
+            this.cancelreqbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.cancelreqbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cancelreqbutton.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cancelreqbutton.Location = new System.Drawing.Point(189, 242);
             this.cancelreqbutton.Name = "cancelreqbutton";
             this.cancelreqbutton.Size = new System.Drawing.Size(120, 39);
             this.cancelreqbutton.TabIndex = 81;
             this.cancelreqbutton.Text = "Отмена";
-            this.cancelreqbutton.UseVisualStyleBackColor = true;
+            this.cancelreqbutton.UseVisualStyleBackColor = false;
             this.cancelreqbutton.Click += new System.EventHandler(this.cancelreqbutton_Click);
             // 
             // label4
@@ -146,9 +156,9 @@
             this.label4.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label4.Location = new System.Drawing.Point(12, 204);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 16);
+            this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 83;
-            this.label4.Text = "Сотрудник:";
+            this.label4.Text = "Работник:";
             // 
             // workertextBox
             // 
@@ -174,11 +184,25 @@
             this.label5.TabIndex = 85;
             this.label5.Text = "Код:";
             // 
+            // clearbutton
+            // 
+            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
+            this.clearbutton.Location = new System.Drawing.Point(7, 242);
+            this.clearbutton.Name = "clearbutton";
+            this.clearbutton.Size = new System.Drawing.Size(42, 39);
+            this.clearbutton.TabIndex = 108;
+            this.clearbutton.UseVisualStyleBackColor = false;
+            // 
             // Make_Request
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(325, 293);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
+            this.ClientSize = new System.Drawing.Size(326, 295);
+            this.Controls.Add(this.clearbutton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.IDtextBox);
             this.Controls.Add(this.label4);
@@ -220,5 +244,6 @@
         public System.Windows.Forms.TextBox workertextBox;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox IDtextBox;
+        private System.Windows.Forms.Button clearbutton;
     }
 }

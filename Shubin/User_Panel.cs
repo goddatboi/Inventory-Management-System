@@ -84,5 +84,15 @@ namespace Shubin
         {
             MessageBox.Show("Курсовой проект по МДК.04.01:\nИнформационная система учета инвентаря организации\nРазработчик: Шубин Михаил, студент группы ИП-41");
         }
+
+        private void myinventoryButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

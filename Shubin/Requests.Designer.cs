@@ -31,19 +31,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requests));
             this.DGV_Requests = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.searchtextBox = new System.Windows.Forms.TextBox();
             this.Req_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Inv_Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Req_Worker_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Inv_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Confirm = new System.Windows.Forms.DataGridViewImageColumn();
             this.Deny = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.searchtextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Requests)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             this.Req_ID,
             this.Req_Name,
             this.Req_Quantity,
-            this.Inv_Worker_ID,
+            this.Req_Worker_ID,
             this.Req_Inv_ID,
             this.Req_Date,
             this.Req_Status,
@@ -80,73 +80,6 @@
             this.DGV_Requests.Size = new System.Drawing.Size(777, 450);
             this.DGV_Requests.TabIndex = 2;
             this.DGV_Requests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Requests_CellContentClick);
-            // 
-            // Req_ID
-            // 
-            this.Req_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Req_ID.HeaderText = "Код";
-            this.Req_ID.Name = "Req_ID";
-            this.Req_ID.ReadOnly = true;
-            this.Req_ID.Width = 55;
-            // 
-            // Req_Name
-            // 
-            this.Req_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Req_Name.HeaderText = "Название";
-            this.Req_Name.Name = "Req_Name";
-            this.Req_Name.ReadOnly = true;
-            // 
-            // Req_Quantity
-            // 
-            this.Req_Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Req_Quantity.HeaderText = "Количество";
-            this.Req_Quantity.Name = "Req_Quantity";
-            this.Req_Quantity.ReadOnly = true;
-            this.Req_Quantity.Width = 106;
-            // 
-            // Inv_Worker_ID
-            // 
-            this.Inv_Worker_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Inv_Worker_ID.HeaderText = "Код_Работника";
-            this.Inv_Worker_ID.Name = "Inv_Worker_ID";
-            this.Inv_Worker_ID.Width = 132;
-            // 
-            // Req_Inv_ID
-            // 
-            this.Req_Inv_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Req_Inv_ID.HeaderText = "Код_инвентаря";
-            this.Req_Inv_ID.Name = "Req_Inv_ID";
-            this.Req_Inv_ID.Width = 132;
-            // 
-            // Req_Date
-            // 
-            this.Req_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Req_Date.HeaderText = "Дата запроса";
-            this.Req_Date.Name = "Req_Date";
-            this.Req_Date.Width = 110;
-            // 
-            // Req_Status
-            // 
-            this.Req_Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Req_Status.HeaderText = "Статус";
-            this.Req_Status.Name = "Req_Status";
-            this.Req_Status.Width = 73;
-            // 
-            // Confirm
-            // 
-            this.Confirm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Confirm.HeaderText = "";
-            this.Confirm.Image = global::Shubin.Properties.Resources.Confirm;
-            this.Confirm.Name = "Confirm";
-            this.Confirm.Width = 5;
-            // 
-            // Deny
-            // 
-            this.Deny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Deny.HeaderText = "";
-            this.Deny.Image = global::Shubin.Properties.Resources.Delete;
-            this.Deny.Name = "Deny";
-            this.Deny.Width = 5;
             // 
             // dataGridViewImageColumn1
             // 
@@ -179,6 +112,73 @@
             this.searchtextBox.Size = new System.Drawing.Size(205, 20);
             this.searchtextBox.TabIndex = 0;
             // 
+            // Req_ID
+            // 
+            this.Req_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_ID.HeaderText = "Код";
+            this.Req_ID.Name = "Req_ID";
+            this.Req_ID.ReadOnly = true;
+            this.Req_ID.Width = 55;
+            // 
+            // Req_Name
+            // 
+            this.Req_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Req_Name.HeaderText = "Название";
+            this.Req_Name.Name = "Req_Name";
+            this.Req_Name.ReadOnly = true;
+            // 
+            // Req_Quantity
+            // 
+            this.Req_Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_Quantity.HeaderText = "Количество";
+            this.Req_Quantity.Name = "Req_Quantity";
+            this.Req_Quantity.ReadOnly = true;
+            this.Req_Quantity.Width = 106;
+            // 
+            // Req_Worker_ID
+            // 
+            this.Req_Worker_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_Worker_ID.HeaderText = "Работник";
+            this.Req_Worker_ID.Name = "Req_Worker_ID";
+            this.Req_Worker_ID.Width = 91;
+            // 
+            // Req_Inv_ID
+            // 
+            this.Req_Inv_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_Inv_ID.HeaderText = "Инвентарь";
+            this.Req_Inv_ID.Name = "Req_Inv_ID";
+            this.Req_Inv_ID.Width = 101;
+            // 
+            // Req_Date
+            // 
+            this.Req_Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_Date.HeaderText = "Дата запроса";
+            this.Req_Date.Name = "Req_Date";
+            this.Req_Date.Width = 110;
+            // 
+            // Req_Status
+            // 
+            this.Req_Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Req_Status.HeaderText = "Статус";
+            this.Req_Status.Name = "Req_Status";
+            this.Req_Status.Width = 73;
+            // 
+            // Confirm
+            // 
+            this.Confirm.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Confirm.HeaderText = "";
+            this.Confirm.Image = global::Shubin.Properties.Resources.Confirm;
+            this.Confirm.Name = "Confirm";
+            this.Confirm.Width = 5;
+            // 
+            // Deny
+            // 
+            this.Deny.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Deny.HeaderText = "";
+            this.Deny.Image = global::Shubin.Properties.Resources.Delete;
+            this.Deny.Name = "Deny";
+            this.Deny.Width = 5;
+            // 
             // Requests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -202,16 +202,16 @@
         private System.Windows.Forms.DataGridView DGV_Requests;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox searchtextBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_Quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Inv_Worker_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Req_Worker_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_Inv_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_Date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Req_Status;
         private System.Windows.Forms.DataGridViewImageColumn Confirm;
         private System.Windows.Forms.DataGridViewImageColumn Deny;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox searchtextBox;
     }
 }

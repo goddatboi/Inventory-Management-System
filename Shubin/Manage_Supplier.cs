@@ -15,7 +15,6 @@ namespace Shubin
     {
         DataBaseConnection dataBase = new DataBaseConnection();
         SqlCommand command = new SqlCommand();
-        SqlDataReader DR;
         public Manage_Supplier()
         {
             InitializeComponent();
@@ -77,7 +76,12 @@ namespace Shubin
 
         private void clearbutton_Click(object sender, EventArgs e)
         {
-
+            nametextBox.Text = "";
+            famtextBox.Text = "";
+            phonemaskedTextBox.Text = "";
+            emailtextBox.Text = "";
+            addresstextBox.Text = "";
+            innmaskedTextBox.Text = "";
         }
 
         private void Manage_Supplier_Load(object sender, EventArgs e)
