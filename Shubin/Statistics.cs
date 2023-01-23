@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.DataVisualization;
-using System.Windows.Forms.DataVisualization.Charting;
+using System.Data.SqlClient;
+using Word = Microsoft.Office.Interop.Word;
 
 namespace Shubin
 {
@@ -18,6 +17,10 @@ namespace Shubin
         DataBaseConnection dataBase = new DataBaseConnection();
         SqlCommand command = new SqlCommand();
         SqlDataReader DR;
+
+        private Word.Application application;
+        Word.Document document;
+        Word.Paragraph wordparagraph;
         public Statistics()
         {
             InitializeComponent();
@@ -44,25 +47,49 @@ namespace Shubin
 
         private void Statistics_Load(object sender, EventArgs e)
         {
-            var chart = new Chart();
-            chart.ChartAreas.Add("ChartArea1");
-            chart.Legends.Add("Legend1");
-            chart.Series.Add("Series1");
 
-            chart.Series["Series1"].ChartType = SeriesChartType.Pie;
+        }
 
-            foreach (DataGridViewRow row in DGV_InventoryMovement.Rows)
+        private void outdocButton_Click(object sender, EventArgs e)
+        {
+            //Создание нового документа Word
+            document = application.Documents.Add();
+            //Добавление нового параграфа документа Word
+            wordparagraph = document.Paragraphs.Add();
+            wordparagraph.Range.Text = "Статистика движения инвентаря";
+            //Красный цвет шрифта
+            wordparagraph.Range.Font.Color = Word.WdColor.wdColorDarkRed;
+            //Размер 20, Тип шрифта Arial, курсив и полужирный
+            wordparagraph.Range.Font.Size = 18;
+            wordparagraph.Range.Font.Name = "Arial";
+            wordparagraph.Range.Font.Italic = 1;
+            wordparagraph.Range.Font.Bold = 1;
+            wordparagraph = document.Paragraphs.Add();
+            wordparagraph = document.Paragraphs[2];
+            wordparagraph.Range.Font.Color = Word.WdColor.wdColorBlack;
+            wordparagraph.Range.Font.Bold = 1;
+            wordparagraph.Range.Font.Italic = 0;
+            Word.Range wordrange = wordparagraph.Range;
+            var row = DGV_InventoryMovement.Rows.Count;
+            var col = DGV_InventoryMovement.Columns.Count;
+            Word.Table wordtable1 = document.Tables.Add(wordrange, row + 1, col);
+            Word.Range wordcellrange = document.Tables[1].Cell(1, 2).Range;
+            wordtable1.Range.Font.Size = 12;
+            wordtable1.Borders.OutsideLineStyle = Word.WdLineStyle.wdLineStyleDouble;
+            wordtable1.Borders.InsideLineStyle = Word.WdLineStyle.wdLineStyleSingle;
+            wordtable1.Rows[1].Range.Font.Color = Word.WdColor.wdColorBlue;
+            for (int i = 0; i < col; i++)
             {
-                string moveStatus = row.Cells["Move_Status"].Value.ToString();
-                chart.Series["Series1"].Points.AddXY(moveStatus, 1);
+                for (int j = 0; j < row; j++)
+                {
+                    //Занести заголовки полей в ячейку
+                    wordcellrange = document.Tables[1].Cell(1, i + 1).Range;
+                    wordcellrange.Text = DGV_InventoryMovement.Columns[i].ToString();
+                    //Занести данные в ячейки
+                    wordcellrange = document.Tables[1].Cell(j + 2, i + 1).Range;
+                    //wordcellrange.Text = DGV_InventoryMovement.Rows[j][i].ToString();
+                }
             }
-
-            chart.Series["Series1"].IsValueShownAsLabel = true;
-            chart.Series["Series1"].LabelFormat = "{#.#}%";
-            chart.Series["Series1"].LegendText = "#VALX #PERCENT{P1}";
-
-            chart.Dock = DockStyle.Fill;
-            this.Controls.Add(chart);
         }
     }
 }

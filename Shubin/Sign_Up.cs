@@ -29,8 +29,7 @@ namespace Shubin
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            // Проверка на пустые поля
-            if (string.IsNullOrEmpty(Login_Reg.Text) || string.IsNullOrEmpty(Password_Reg.Text))
+            if (string.IsNullOrEmpty(Login_Reg.Text) || string.IsNullOrEmpty(Password_Reg.Text) || string.IsNullOrEmpty(nametextBox.Text) || string.IsNullOrEmpty(famtextBox.Text) || string.IsNullOrEmpty(deprtextBox.Text) || string.IsNullOrEmpty(posttextBox.Text))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -57,7 +56,7 @@ namespace Shubin
             dataBase.openConnection();
             int rowsAffected = command.ExecuteNonQuery();
 
-            if (checkUser())
+            if (checkUser() == false)
             {
                 if (rowsAffected > 0)
                 {
@@ -71,18 +70,6 @@ namespace Shubin
                     MessageBox.Show("Аккаунт не создан!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 dataBase.closeConnection();
-            }
-
-            if (rowsAffected > 0)
-            {
-                MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Log_In loginForm = new Log_In();
-                this.Hide();
-                loginForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Аккаунт не создан!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             dataBase.closeConnection();
         }

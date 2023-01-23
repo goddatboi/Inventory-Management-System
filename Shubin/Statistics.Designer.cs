@@ -42,16 +42,21 @@
             this.Move_Inv_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Move_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Move_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.outdocButton = new Shubin.WorkerButton();
             this.userMain_Panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_InventoryMovement)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outdocButton)).BeginInit();
             this.SuspendLayout();
             // 
             // userMain_Panel
             // 
             this.userMain_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
+            this.userMain_Panel.Controls.Add(this.label1);
             this.userMain_Panel.Controls.Add(this.DGV_InventoryMovement);
+            this.userMain_Panel.Controls.Add(this.outdocButton);
             this.userMain_Panel.Controls.Add(this.chart1);
             this.userMain_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userMain_Panel.Location = new System.Drawing.Point(0, 59);
@@ -154,6 +159,30 @@
             this.Move_Status.Name = "Move_Status";
             this.Move_Status.Width = 73;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(651, 431);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(204, 14);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Вывод во внешний документ";
+            // 
+            // outdocButton
+            // 
+            this.outdocButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.outdocButton.Image = global::Shubin.Properties.Resources.DocWhite;
+            this.outdocButton.ImageHover = global::Shubin.Properties.Resources.DocBlack;
+            this.outdocButton.ImageNormal = global::Shubin.Properties.Resources.DocWhite;
+            this.outdocButton.Location = new System.Drawing.Point(728, 378);
+            this.outdocButton.Name = "outdocButton";
+            this.outdocButton.Size = new System.Drawing.Size(50, 50);
+            this.outdocButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.outdocButton.TabIndex = 78;
+            this.outdocButton.TabStop = false;
+            this.outdocButton.Click += new System.EventHandler(this.outdocButton_Click);
+            // 
             // Statistics
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -166,10 +195,12 @@
             this.Text = "InventoryPro 2.0";
             this.Load += new System.EventHandler(this.Statistics_Load);
             this.userMain_Panel.ResumeLayout(false);
+            this.userMain_Panel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_InventoryMovement)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.outdocButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -185,5 +216,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Inv_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Status;
+        private System.Windows.Forms.Label label1;
+        private WorkerButton outdocButton;
     }
 }
