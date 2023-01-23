@@ -87,7 +87,7 @@ namespace Shubin
 
         private void historyButton_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new User_History());
         }
 
         private void adminButton_Click(object sender, EventArgs e)

@@ -64,5 +64,46 @@ namespace Shubin
         {
             openChildForm(new Suppliers());
         }
+
+        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Statistics statForm = new Statistics();
+            this.Hide();
+            statForm.ShowDialog();
+            statForm.Dispose();
+        }
+
+        private void сменитьПользователяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите сменить пользователя?", "Изменение пользователя", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Log_In loginForm = new Log_In();
+                loginForm.Show();
+                this.Hide();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Вы уверены, что хотите выйти из программы?", "Выход из программы", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Close();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+        }
+
+        private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Курсовой проект по МДК.04.01:\nИнформационная система учета инвентаря организации\nРазработчик: Шубин Михаил, студент группы ИП-41");
+        }
     }
 }
