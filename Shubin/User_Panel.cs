@@ -7,21 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace Shubin
 {
-    public partial class Admin_Panel : Form
+    public partial class User_Panel : Form
     {
-        DataBaseConnection database = new DataBaseConnection();
-
-        public Admin_Panel()
+        public User_Panel()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void Admin_Panel_Load(object sender, EventArgs e)
+        private void User_Panel_Load(object sender, EventArgs e)
         {
 
         }
@@ -36,41 +33,18 @@ namespace Shubin
             }
 
             activeForm = childForm;
-            activeForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
+            activeForm.TopLevel= false;
+            childForm.FormBorderStyle= FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            adminMain_Panel.Controls.Add(childForm);
-            adminMain_Panel.Tag = childForm;
+            userMain_Panel.Controls.Add(childForm);
+            userMain_Panel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
 
         private void requestButton_Click(object sender, EventArgs e)
         {
-            openChildForm(new Requests());
-        }
-
-        private void workersButton_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Workers());
-        }
-
-        private void inventoryButton_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Inventory());
-        }
-
-        private void suppliersButton_Click(object sender, EventArgs e)
-        {
-            openChildForm(new Suppliers());
-        }
-
-        private void статистикаToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Statistics statForm = new Statistics();
-            this.Hide();
-            statForm.ShowDialog();
-            statForm.Dispose();
+            openChildForm(new Request_Item());
         }
 
         private void сменитьПользователяToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,6 +78,24 @@ namespace Shubin
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Курсовой проект по МДК.04.01:\nИнформационная система учета инвентаря организации\nРазработчик: Шубин Михаил, студент группы ИП-41");
+        }
+
+        private void myinventoryButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new User_Inventory());
+        }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+            openChildForm(new User_History());
+        }
+
+        private void adminButton_Click(object sender, EventArgs e)
+        {
+            Admin_Panel adminForm = new Admin_Panel();
+            this.Hide();
+            adminForm.ShowDialog();
+            this.Show();
         }
     }
 }

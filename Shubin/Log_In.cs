@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Windows.Forms.VisualStyles;
+using static Shubin.Program;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
 namespace Shubin
 {
     public partial class Log_In : Form
     {
+
         DataBaseConnection dataBase = new DataBaseConnection();
         public Log_In()
         {
@@ -47,11 +50,12 @@ namespace Shubin
 
             var loginUser = Login_Log.Text;
             var passwordUser = Password_Log.Text;
+            GlobalVariables.login = Login_Log.Text;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
 
-            string querystring = $"select ID, Login_User, Password_User, Is_Admin from RegUsers where Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT Work_ID, Login_User, Password_User, Is_Admin FROM Workers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -60,12 +64,25 @@ namespace Shubin
 
             if (table.Rows.Count == 1)
             {
-                var user = new checkUserAccess(table.Rows[0].ItemArray[1].ToString(), Convert.ToBoolean(table.Rows[0].ItemArray[3]));
-
-                MessageBox.Show("Вы успешно вошли!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Main mainForm = new Main(user);
-                this.Hide();
-                mainForm.ShowDialog();
+                var isAdmin = (bool)table.Rows[0]["Is_Admin"];
+                if (isAdmin)
+                {
+                    MessageBox.Show("Вы успешно вошли как Администратор!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    User_Panel userForm = new User_Panel();
+                    this.Hide();
+                    userForm.ShowDialog();
+                    userForm.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Вы успешно вошли как Пользователь!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    User_Panel userForm = new User_Panel();
+                    userForm.adminButton.Visible = false;
+                    userForm.label4.Visible = false;
+                    this.Hide();
+                    userForm.ShowDialog();
+                    userForm.Dispose();
+                }
             }
             else
             {
@@ -81,10 +98,9 @@ namespace Shubin
             this.Show();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void loginButton_MouseEnter(object sender, EventArgs e)
         {
-            Login_Log.Text = "";
-            Password_Log.Text = "";
+            
         }
     }
 }

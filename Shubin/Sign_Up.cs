@@ -29,8 +29,7 @@ namespace Shubin
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            // Проверка на пустые поля
-            if (string.IsNullOrEmpty(Login_Reg.Text) || string.IsNullOrEmpty(Password_Reg.Text))
+            if (string.IsNullOrEmpty(Login_Reg.Text) || string.IsNullOrEmpty(Password_Reg.Text) || string.IsNullOrEmpty(nametextBox.Text) || string.IsNullOrEmpty(famtextBox.Text) || string.IsNullOrEmpty(deprtextBox.Text) || string.IsNullOrEmpty(posttextBox.Text))
             {
                 MessageBox.Show("Пожалуйста, заполните все поля!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -43,26 +42,34 @@ namespace Shubin
                 return;
             }
 
+            var name = nametextBox.Text;
+            var fam = famtextBox.Text;
+            var depr = deprtextBox.Text;
+            var post = posttextBox.Text;
             var loginUser = Login_Reg.Text;
             var passwordUser = Password_Reg.Text;
 
-            string querystring = $"insert into RegUsers(Login_User, Password_User, Is_Admin) values ('{loginUser}', '{passwordUser}', 0)";
+            string querystring = $"INSERT INTO Workers(Work_Name, Work_Fam, Work_Department, Work_Post, Login_User, Password_User, Is_Admin) VALUES ('{name}','{fam}','{depr}','{post}','{loginUser}', '{passwordUser}', 0)";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
             dataBase.openConnection();
             int rowsAffected = command.ExecuteNonQuery();
 
-            if (rowsAffected > 0)
+            if (checkUser() == false)
             {
-                MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Log_In loginForm = new Log_In();
-                this.Hide();
-                loginForm.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Аккаунт не создан!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Log_In loginForm = new Log_In();
+                    this.Hide();
+                    loginForm.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Аккаунт не создан!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                dataBase.closeConnection();
             }
             dataBase.closeConnection();
         }
@@ -73,7 +80,7 @@ namespace Shubin
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
-            string querystring = $"select ID, Login_User, Password_User, Is_Admin from RegUsers where Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
+            string querystring = $"SELECT Work_ID, Login_User, Password_User, Is_Admin FROM Workers WHERE Login_User = '{loginUser}' and Password_User = '{passwordUser}'";
 
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
@@ -89,17 +96,6 @@ namespace Shubin
             {
                 return false;
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Login_Reg.Text = "";
-            Password_Reg.Text = "";
-        }
-
-        private void registerButton_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }
