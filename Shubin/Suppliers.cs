@@ -25,7 +25,6 @@ namespace Shubin
 
         public void LoadSuppliers()
         {
-            int i = 0;
             DGV_Suppliers.Rows.Clear();
             command = new SqlCommand("SELECT * FROM Suppliers", dataBase.getConnection());
             dataBase.openConnection();
@@ -33,8 +32,7 @@ namespace Shubin
 
             while (DR.Read())
             {
-                i++;
-                DGV_Suppliers.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
+                DGV_Suppliers.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

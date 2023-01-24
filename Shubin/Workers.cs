@@ -30,7 +30,6 @@ namespace Shubin
 
         public void LoadWorkers()
         {
-            int i = 0;
             DGV_Workers.Rows.Clear();
             command = new SqlCommand("SELECT * FROM Workers", dataBase.getConnection());
             dataBase.openConnection();
@@ -38,8 +37,7 @@ namespace Shubin
 
             while (DR.Read())
             {
-                i++;
-                DGV_Workers.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString(), DR[7].ToString());
+                DGV_Workers.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString(), DR[7].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

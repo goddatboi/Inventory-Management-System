@@ -31,7 +31,6 @@ namespace Shubin
 
         public void LoadRequests()
         {
-            int i = 0;
             DGV_Requests.Rows.Clear();
             command = new SqlCommand("SELECT * FROM Requests", dataBase.getConnection());
             dataBase.openConnection();
@@ -39,8 +38,7 @@ namespace Shubin
 
             while (DR.Read())
             {
-                i++;
-                DGV_Requests.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
+                DGV_Requests.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

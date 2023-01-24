@@ -32,7 +32,6 @@ namespace Shubin
         }
         public void LoadInventory()
         {
-            int i = 0;
             DGV_Inventory.Rows.Clear();
             command = new SqlCommand("SELECT * FROM InventoryItems", dataBase.getConnection());
             dataBase.openConnection();
@@ -40,8 +39,7 @@ namespace Shubin
 
             while (DR.Read())
             {
-                i++;
-                DGV_Inventory.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString());
+                DGV_Inventory.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

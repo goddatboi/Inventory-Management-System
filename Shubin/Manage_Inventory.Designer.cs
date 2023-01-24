@@ -47,6 +47,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pricetextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.idtextBox = new System.Windows.Forms.TextBox();
             this.supcomboBox = new System.Windows.Forms.ComboBox();
             this.clearbutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -223,6 +224,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
+            this.panel2.Controls.Add(this.idtextBox);
             this.panel2.Controls.Add(this.supcomboBox);
             this.panel2.Controls.Add(this.purchdateTimePicker);
             this.panel2.Controls.Add(this.label1);
@@ -245,6 +247,14 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(366, 323);
             this.panel2.TabIndex = 110;
+            // 
+            // idtextBox
+            // 
+            this.idtextBox.Location = new System.Drawing.Point(95, 17);
+            this.idtextBox.Name = "idtextBox";
+            this.idtextBox.Size = new System.Drawing.Size(36, 20);
+            this.idtextBox.TabIndex = 111;
+            this.idtextBox.Visible = false;
             // 
             // supcomboBox
             // 
@@ -308,5 +318,6 @@
         public System.Windows.Forms.DateTimePicker purchdateTimePicker;
         public System.Windows.Forms.NumericUpDown qtynumericUpDown;
         public System.Windows.Forms.ComboBox supcomboBox;
+        public System.Windows.Forms.TextBox idtextBox;
     }
 }

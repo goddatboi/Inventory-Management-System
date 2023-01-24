@@ -33,15 +33,13 @@ namespace Shubin
             dataBase.openConnection();
             command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
             var worker = Convert.ToInt32(command.ExecuteScalar());
-            int i = 0;
             DGV_UserHistory.Rows.Clear();
             command = new SqlCommand($"SELECT * FROM InventoryMovement WHERE Move_Worker_ID = '{worker}'", dataBase.getConnection());
             DR = command.ExecuteReader();
 
             while (DR.Read())
             {
-                i++;
-                DGV_UserHistory.Rows.Add(i, DR[2].ToString(), DR[3].ToString(), DR[6].ToString());
+                DGV_UserHistory.Rows.Add(DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[6].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

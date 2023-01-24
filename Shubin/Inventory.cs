@@ -31,7 +31,6 @@ namespace Shubin
 
         public void LoadInventory()
         {
-            int i = 0;
             DGV_Inventory.Rows.Clear();
             command = new SqlCommand("SELECT * FROM InventoryItems WHERE CONCAT(Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location,Inv_Status) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
@@ -39,8 +38,7 @@ namespace Shubin
 
             while (DR.Read())
             {
-                i++;
-                DGV_Inventory.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString(), DR[7].ToString());
+                DGV_Inventory.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString(), DR[7].ToString());
             }
             DR.Close();
             dataBase.closeConnection();

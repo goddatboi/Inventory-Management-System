@@ -35,7 +35,17 @@ namespace Shubin
                 var returnCommand = new SqlCommand(returnInv, dataBase.getConnection());
                 returnCommand.ExecuteNonQuery();
 
-                var delInv = "DELETE FROM InventoryStatus WHERE St_ID = " + DGV_UserInventory.Rows[e.RowIndex].Cells["St_ID"].Value;
+                var moveQuery = "INSERT INTO InventoryMovement (Move_Inv_ID, Move_Inv_Name, Move_Quantity, Move_Date, Move_Worker_ID, Move_Status) VALUES (@Move_Inv_ID, @Move_Inv_Name, @Move_Quantity, @Move_Date, @Move_Worker_ID, @Move_Status)";
+                var moveCommand = new SqlCommand(moveQuery, dataBase.getConnection());
+                moveCommand.Parameters.AddWithValue("@Move_Inv_ID", DGV_UserInventory.Rows[e.RowIndex].Cells[1].Value.ToString());
+                moveCommand.Parameters.AddWithValue("@Move_Inv_Name", DGV_UserInventory.Rows[e.RowIndex].Cells[2].Value.ToString());
+                moveCommand.Parameters.AddWithValue("@Move_Quantity", DGV_UserInventory.Rows[e.RowIndex].Cells[4].Value.ToString());
+                moveCommand.Parameters.AddWithValue("@Move_Date", DGV_UserInventory.Rows[e.RowIndex].Cells[3].Value.ToString());
+                moveCommand.Parameters.AddWithValue("@Move_Worker_ID", DGV_UserInventory.Rows[e.RowIndex].Cells[6].Value.ToString());
+                moveCommand.Parameters.AddWithValue("@Move_Status", "Возвращен");
+                moveCommand.ExecuteNonQuery();
+
+                var delInv = "DELETE FROM InventoryStatus WHERE St_Inv_ID = " + DGV_UserInventory.Rows[e.RowIndex].Cells["St_Inv_ID"].Value;
                 var delCommand = new SqlCommand(delInv, dataBase.getConnection());
                 delCommand.ExecuteNonQuery();
 
@@ -54,7 +64,7 @@ namespace Shubin
                 command.Parameters.AddWithValue("@Req_Date", DGV_UserInventory.Rows[e.RowIndex].Cells["St_UpdateDate"].Value);
                 command.ExecuteNonQuery();
 
-                var delInv = "DELETE FROM InventoryStatus WHERE St_ID = " + DGV_UserInventory.Rows[e.RowIndex].Cells["St_ID"].Value;
+                var delInv = "DELETE FROM InventoryStatus WHERE St_Inv_ID = " + DGV_UserInventory.Rows[e.RowIndex].Cells["St_Inv_ID"].Value;
                 var delCommand = new SqlCommand(delInv, dataBase.getConnection());
                 delCommand.ExecuteNonQuery();
 
@@ -69,15 +79,13 @@ namespace Shubin
             dataBase.openConnection();
             command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
             var worker = Convert.ToInt32(command.ExecuteScalar());
-            int i = 0;
             DGV_UserInventory.Rows.Clear();
             command = new SqlCommand($"SELECT * FROM InventoryStatus WHERE St_RespWorker = '{worker}'", dataBase.getConnection());
             DR = command.ExecuteReader();
 
             while (DR.Read())
             {
-                i++;
-                DGV_UserInventory.Rows.Add(i, DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
+                DGV_UserInventory.Rows.Add(DR[0].ToString(), DR[1].ToString(), DR[2].ToString(), DR[3].ToString(), DR[4].ToString(), DR[5].ToString(), DR[6].ToString());
             }
             DR.Close();
             dataBase.closeConnection();
