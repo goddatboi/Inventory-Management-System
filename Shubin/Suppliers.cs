@@ -26,7 +26,7 @@ namespace Shubin
         public void LoadSuppliers()
         {
             DGV_Suppliers.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM Suppliers", dataBase.getConnection());
+            command = new SqlCommand("SELECT * FROM Suppliers WHERE CONCAT(Sup_ID, Sup_Name, Sup_Fam, Sup_Phone, Sup_Email, Sup_Address, Sup_INN) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
 
@@ -86,6 +86,11 @@ namespace Shubin
                     MessageBox.Show("Запись успешно удалена");
                 }
             }
+            LoadSuppliers();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
             LoadSuppliers();
         }
     }

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Suppliers));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addButton = new Shubin.WorkerButton();
             this.searchtextBox = new System.Windows.Forms.TextBox();
             this.DGV_Suppliers = new System.Windows.Forms.DataGridView();
             this.Sup_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +42,13 @@
             this.Sup_Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sup_Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sup_INN = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.addButton = new Shubin.WorkerButton();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,12 +62,27 @@
             this.panel1.Size = new System.Drawing.Size(627, 45);
             this.panel1.TabIndex = 6;
             // 
+            // addButton
+            // 
+            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addButton.Image = global::Shubin.Properties.Resources.AddButton;
+            this.addButton.ImageHover = global::Shubin.Properties.Resources.AddButtonBlack;
+            this.addButton.ImageNormal = global::Shubin.Properties.Resources.AddButton;
+            this.addButton.Location = new System.Drawing.Point(223, 3);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(30, 30);
+            this.addButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.addButton.TabIndex = 78;
+            this.addButton.TabStop = false;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
+            // 
             // searchtextBox
             // 
             this.searchtextBox.Location = new System.Drawing.Point(12, 13);
             this.searchtextBox.Name = "searchtextBox";
             this.searchtextBox.Size = new System.Drawing.Size(205, 20);
             this.searchtextBox.TabIndex = 0;
+            this.searchtextBox.TextChanged += new System.EventHandler(this.searchtextBox_TextChanged);
             // 
             // DGV_Suppliers
             // 
@@ -159,36 +174,6 @@
             this.Sup_INN.Name = "Sup_INN";
             this.Sup_INN.Width = 57;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 5;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 5;
-            // 
-            // addButton
-            // 
-            this.addButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.addButton.Image = global::Shubin.Properties.Resources.AddButton;
-            this.addButton.ImageHover = global::Shubin.Properties.Resources.AddButtonBlack;
-            this.addButton.ImageNormal = global::Shubin.Properties.Resources.AddButton;
-            this.addButton.Location = new System.Drawing.Point(223, 3);
-            this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(30, 30);
-            this.addButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.addButton.TabIndex = 78;
-            this.addButton.TabStop = false;
-            this.addButton.Click += new System.EventHandler(this.addButton_Click);
-            // 
             // Edit
             // 
             this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -205,6 +190,20 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 5;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
             // Suppliers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +217,8 @@
             this.Load += new System.EventHandler(this.Suppliers_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.addButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_Suppliers)).EndInit();
             this.ResumeLayout(false);
 
         }

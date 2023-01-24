@@ -34,7 +34,7 @@ namespace Shubin
             command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
             var worker = Convert.ToInt32(command.ExecuteScalar());
             DGV_UserHistory.Rows.Clear();
-            command = new SqlCommand($"SELECT * FROM InventoryMovement WHERE Move_Worker_ID = '{worker}'", dataBase.getConnection());
+            command = new SqlCommand($"SELECT * FROM InventoryMovement WHERE Move_Worker_ID = '{worker}' and CONCAT(Move_ID, Move_Inv_ID, Move_Inv_Name, Move_Quantity, Move_Date, Move_Worker_ID, Move_Status) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             DR = command.ExecuteReader();
 
             while (DR.Read())
@@ -43,6 +43,11 @@ namespace Shubin
             }
             DR.Close();
             dataBase.closeConnection();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadUserHistory();
         }
     }
 }

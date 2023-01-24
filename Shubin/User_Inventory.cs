@@ -80,7 +80,7 @@ namespace Shubin
             command = new SqlCommand($"SELECT Work_ID FROM Workers WHERE Login_User = '{Convert.ToString(GlobalVariables.login)}'", dataBase.getConnection());
             var worker = Convert.ToInt32(command.ExecuteScalar());
             DGV_UserInventory.Rows.Clear();
-            command = new SqlCommand($"SELECT * FROM InventoryStatus WHERE St_RespWorker = '{worker}'", dataBase.getConnection());
+            command = new SqlCommand($"SELECT * FROM InventoryStatus WHERE St_RespWorker = '{worker}' and CONCAT(St_ID, St_Inv_ID, St_Inv_Name, St_UpdateDate, St_Quantity, St_Status, St_RespWorker) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             DR = command.ExecuteReader();
 
             while (DR.Read())
@@ -94,6 +94,11 @@ namespace Shubin
         private void User_Inventory_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
+            LoadInventoryStatus();
         }
     }
 }

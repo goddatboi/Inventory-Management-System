@@ -33,8 +33,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchtextBox = new System.Windows.Forms.TextBox();
             this.DGV_UserInventory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.St_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.St_Inv_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.St_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +42,8 @@
             this.St_RespWorker = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Return = new System.Windows.Forms.DataGridViewImageColumn();
             this.FixRequest = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_UserInventory)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,7 @@
             this.searchtextBox.Name = "searchtextBox";
             this.searchtextBox.Size = new System.Drawing.Size(205, 20);
             this.searchtextBox.TabIndex = 0;
+            this.searchtextBox.TextChanged += new System.EventHandler(this.searchtextBox_TextChanged);
             // 
             // DGV_UserInventory
             // 
@@ -97,22 +98,6 @@
             this.DGV_UserInventory.Size = new System.Drawing.Size(800, 450);
             this.DGV_UserInventory.TabIndex = 5;
             this.DGV_UserInventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Inventory_CellContentClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 5;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 5;
             // 
             // St_ID
             // 
@@ -176,6 +161,20 @@
             this.FixRequest.Image = global::Shubin.Properties.Resources.Fix;
             this.FixRequest.Name = "FixRequest";
             this.FixRequest.Width = 5;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
             // User_Inventory
             // 

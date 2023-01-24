@@ -31,7 +31,7 @@ namespace Shubin
         public void LoadWorkers()
         {
             DGV_Workers.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM Workers", dataBase.getConnection());
+            command = new SqlCommand("SELECT * FROM Workers WHERE CONCAT(Work_ID, Work_Name, Work_Fam, Work_Department, Work_Post, Login_User, Password_User, Is_Admin) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
 
@@ -73,6 +73,11 @@ namespace Shubin
                     MessageBox.Show("Работник успешно удален");
                 }
             }
+            LoadWorkers();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
             LoadWorkers();
         }
     }

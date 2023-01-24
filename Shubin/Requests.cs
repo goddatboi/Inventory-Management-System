@@ -32,7 +32,7 @@ namespace Shubin
         public void LoadRequests()
         {
             DGV_Requests.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM Requests", dataBase.getConnection());
+            command = new SqlCommand("SELECT * FROM Requests WHERE CONCAT(Req_ID, Req_Name, Req_Quantity, Req_Worker_ID, Req_Inv_ID, Req_Date, Req_Status) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
 
@@ -151,6 +151,11 @@ namespace Shubin
                     }
                 }
             }
+            LoadRequests();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
             LoadRequests();
         }
     }

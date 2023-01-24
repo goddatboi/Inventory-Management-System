@@ -33,7 +33,7 @@ namespace Shubin
         public void LoadInventory()
         {
             DGV_Inventory.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM InventoryItems", dataBase.getConnection());
+            command = new SqlCommand("SELECT * FROM InventoryItems WHERE CONCAT(Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location, Inv_Status) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
 

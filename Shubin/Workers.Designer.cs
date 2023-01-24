@@ -40,12 +40,12 @@
             this.Login_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password_User = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Is_Admin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchtextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Workers)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -148,6 +148,22 @@
             this.Is_Admin.Name = "Is_Admin";
             this.Is_Admin.Width = 62;
             // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = global::Shubin.Properties.Resources.Edit;
+            this.Edit.Name = "Edit";
+            this.Edit.Width = 5;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = global::Shubin.Properties.Resources.Delete;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 5;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
@@ -164,6 +180,7 @@
             this.searchtextBox.Name = "searchtextBox";
             this.searchtextBox.Size = new System.Drawing.Size(205, 20);
             this.searchtextBox.TabIndex = 0;
+            this.searchtextBox.TextChanged += new System.EventHandler(this.searchtextBox_TextChanged);
             // 
             // dataGridViewImageColumn1
             // 
@@ -171,7 +188,6 @@
             this.dataGridViewImageColumn1.HeaderText = "";
             this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Edit;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 5;
             // 
             // dataGridViewImageColumn2
             // 
@@ -179,23 +195,6 @@
             this.dataGridViewImageColumn2.HeaderText = "";
             this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 5;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = global::Shubin.Properties.Resources.Edit;
-            this.Edit.Name = "Edit";
-            this.Edit.Width = 5;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = global::Shubin.Properties.Resources.Delete;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 5;
             // 
             // Workers
             // 

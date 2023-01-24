@@ -31,10 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Requests));
             this.DGV_Requests = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.searchtextBox = new System.Windows.Forms.TextBox();
             this.Req_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Req_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +40,10 @@
             this.Req_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Confirm = new System.Windows.Forms.DataGridViewImageColumn();
             this.Deny = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.searchtextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Requests)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,37 +80,6 @@
             this.DGV_Requests.Size = new System.Drawing.Size(777, 450);
             this.DGV_Requests.TabIndex = 2;
             this.DGV_Requests.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Requests_CellContentClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Confirm;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.searchtextBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 405);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(777, 45);
-            this.panel1.TabIndex = 3;
-            // 
-            // searchtextBox
-            // 
-            this.searchtextBox.Location = new System.Drawing.Point(12, 13);
-            this.searchtextBox.Name = "searchtextBox";
-            this.searchtextBox.Size = new System.Drawing.Size(205, 20);
-            this.searchtextBox.TabIndex = 0;
             // 
             // Req_ID
             // 
@@ -178,6 +147,38 @@
             this.Deny.Image = global::Shubin.Properties.Resources.Delete;
             this.Deny.Name = "Deny";
             this.Deny.Width = 5;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::Shubin.Properties.Resources.Confirm;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::Shubin.Properties.Resources.Delete;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.searchtextBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 405);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(777, 45);
+            this.panel1.TabIndex = 3;
+            // 
+            // searchtextBox
+            // 
+            this.searchtextBox.Location = new System.Drawing.Point(12, 13);
+            this.searchtextBox.Name = "searchtextBox";
+            this.searchtextBox.Size = new System.Drawing.Size(205, 20);
+            this.searchtextBox.TabIndex = 0;
+            this.searchtextBox.TextChanged += new System.EventHandler(this.searchtextBox_TextChanged);
             // 
             // Requests
             // 
