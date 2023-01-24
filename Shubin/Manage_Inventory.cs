@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Shubin
 {
@@ -39,7 +40,7 @@ namespace Shubin
             command = new SqlCommand("SELECT Sup_ID FROM Suppliers", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
-            
+
             while (DR.Read())
             {
                 supcomboBox.Items.Add(DR[0].ToString());
@@ -55,8 +56,7 @@ namespace Shubin
             {
                 if (MessageBox.Show("Вы уверены, что хотите сохранить этот инвентарный объект", "Сохранение", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    command = new SqlCommand("INSERT INTO InventoryItems (Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location, Inv_Status) VALUES (@Inv_ID, @Inv_Name, @Inv_Quantity, @Inv_Price, @Inv_PurchaseDate, @Inv_Supplier_ID, @Inv_Location, @Inv_Status)", dataBase.getConnection());
-                   //command.Parameters.AddWithValue("@Inv_ID", idtextBox.Text);
+                    command = new SqlCommand("INSERT INTO InventoryItems (Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location, Inv_Status) VALUES (@Inv_Name, @Inv_Quantity, @Inv_Price, @Inv_PurchaseDate, @Inv_Supplier_ID, @Inv_Location, @Inv_Status)", dataBase.getConnection());
                     command.Parameters.AddWithValue("@Inv_Name", nametextBox.Text);
                     command.Parameters.AddWithValue("@Inv_Quantity", qtynumericUpDown.Value);
                     command.Parameters.AddWithValue("@Inv_Price", Convert.ToInt32(pricetextBox.Text));
@@ -84,7 +84,7 @@ namespace Shubin
             {
                 if (MessageBox.Show("Вы уверены, что хотите обновить этот инвентарный объект", "Обновление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    //command = new SqlCommand($"UPDATE InventoryItems SET Inv_Name = @Inv_Name, Inv_Quantity = @Inv_Quantity, Inv_Price = @Inv_Price, Inv_PurchaseDate = @Inv_PurchaseDate, Inv_Supplier_ID = @Inv_Supplier_ID, Inv_Location = @Inv_Location, Inv_Status = @Inv_Status WHERE Inv_ID = '{idtextBox.Text}'", dataBase.getConnection());
+                    command = new SqlCommand($"UPDATE InventoryItems SET Inv_Name = @Inv_Name, Inv_Quantity = @Inv_Quantity, Inv_Price = @Inv_Price, Inv_PurchaseDate = @Inv_PurchaseDate, Inv_Supplier_ID = @Inv_Supplier_ID, Inv_Location = @Inv_Location, Inv_Status = @Inv_Status WHERE Inv_ID = '{idtextBox.Text}'", dataBase.getConnection());
                     command.Parameters.AddWithValue("@Inv_Name", nametextBox.Text);
                     command.Parameters.AddWithValue("@Inv_Quantity", qtynumericUpDown.Value);
                     command.Parameters.AddWithValue("@Inv_Price", Convert.ToInt32(pricetextBox.Text));

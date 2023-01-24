@@ -33,7 +33,7 @@ namespace Shubin
         {
             int i = 0;
             DGV_Inventory.Rows.Clear();
-            command = new SqlCommand("SELECT * FROM InventoryItems", dataBase.getConnection());
+            command = new SqlCommand("SELECT * FROM InventoryItems WHERE CONCAT(Inv_ID, Inv_Name, Inv_Quantity, Inv_Price, Inv_PurchaseDate, Inv_Supplier_ID, Inv_Location,Inv_Status) LIKE '%" + searchtextBox.Text + "%'", dataBase.getConnection());
             dataBase.openConnection();
             DR = command.ExecuteReader();
 
@@ -90,6 +90,11 @@ namespace Shubin
             manageInvForm.savebutton.Enabled = true;
             manageInvForm.updatebutton.Enabled = false;
             manageInvForm.ShowDialog();
+            LoadInventory();
+        }
+
+        private void searchtextBox_TextChanged(object sender, EventArgs e)
+        {
             LoadInventory();
         }
     }

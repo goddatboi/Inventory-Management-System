@@ -55,8 +55,9 @@ namespace Shubin
 
             dataBase.openConnection();
 
-            if (checkUser() == false)
+            if (!checkUser())
             {
+                int rowsAffected = command.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
                     MessageBox.Show("Аккаунт успешно создан!", "Успешно", MessageBoxButtons.OK, MessageBoxIcon.Information);
