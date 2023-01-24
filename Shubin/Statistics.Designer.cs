@@ -53,25 +53,24 @@
             // 
             // userMain_Panel
             // 
-            this.userMain_Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
-            this.userMain_Panel.Controls.Add(this.label1);
+            this.userMain_Panel.BackColor = System.Drawing.Color.White;
+            this.userMain_Panel.Controls.Add(this.chart1);
             this.userMain_Panel.Controls.Add(this.DGV_InventoryMovement);
-            this.userMain_Panel.Controls.Add(this.outdocButton);
             this.userMain_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userMain_Panel.Location = new System.Drawing.Point(0, 59);
+            this.userMain_Panel.Location = new System.Drawing.Point(0, 89);
             this.userMain_Panel.Name = "userMain_Panel";
-            this.userMain_Panel.Size = new System.Drawing.Size(865, 462);
+            this.userMain_Panel.Size = new System.Drawing.Size(865, 432);
             this.userMain_Panel.TabIndex = 74;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(651, 431);
+            this.label1.Location = new System.Drawing.Point(786, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(204, 14);
+            this.label1.Size = new System.Drawing.Size(62, 14);
             this.label1.TabIndex = 79;
-            this.label1.Text = "Вывод во внешний документ";
+            this.label1.Text = "Экспорт";
             // 
             // DGV_InventoryMovement
             // 
@@ -97,7 +96,7 @@
             this.DGV_InventoryMovement.EnableHeadersVisualStyles = false;
             this.DGV_InventoryMovement.Location = new System.Drawing.Point(0, 0);
             this.DGV_InventoryMovement.Name = "DGV_InventoryMovement";
-            this.DGV_InventoryMovement.Size = new System.Drawing.Size(372, 462);
+            this.DGV_InventoryMovement.Size = new System.Drawing.Size(378, 432);
             this.DGV_InventoryMovement.TabIndex = 6;
             // 
             // Move_ID
@@ -134,17 +133,19 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(191)))), ((int)(((byte)(64)))));
             this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.outdocButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(865, 59);
+            this.panel1.Size = new System.Drawing.Size(865, 89);
             this.panel1.TabIndex = 73;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(12, 18);
+            this.label9.Location = new System.Drawing.Point(12, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(376, 23);
             this.label9.TabIndex = 69;
@@ -152,19 +153,20 @@
             // 
             // chart1
             // 
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(208)))), ((int)(((byte)(115)))));
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(378, 65);
+            this.chart1.Location = new System.Drawing.Point(384, 6);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Label = "#PERCENT";
             series1.Legend = "Legend1";
+            series1.LegendText = "#VALX";
             series1.Name = "Series1";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(475, 322);
+            this.chart1.Size = new System.Drawing.Size(475, 414);
             this.chart1.TabIndex = 82;
             this.chart1.Text = "chart1";
             // 
@@ -174,7 +176,7 @@
             this.outdocButton.Image = global::Shubin.Properties.Resources.DocWhite;
             this.outdocButton.ImageHover = global::Shubin.Properties.Resources.DocBlack;
             this.outdocButton.ImageNormal = global::Shubin.Properties.Resources.DocWhite;
-            this.outdocButton.Location = new System.Drawing.Point(728, 378);
+            this.outdocButton.Location = new System.Drawing.Point(792, 12);
             this.outdocButton.Name = "outdocButton";
             this.outdocButton.Size = new System.Drawing.Size(50, 50);
             this.outdocButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -187,7 +189,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 521);
-            this.Controls.Add(this.chart1);
             this.Controls.Add(this.userMain_Panel);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -195,7 +196,6 @@
             this.Text = "InventoryPro 2.0";
             this.Load += new System.EventHandler(this.Statistics_Load);
             this.userMain_Panel.ResumeLayout(false);
-            this.userMain_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_InventoryMovement)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -15,7 +15,7 @@ namespace Shubin
 {
     public partial class Statistics : Form
     {
-        int approved = 0, rejected = 0, repair = 0;
+        int approved = 0, rejected = 0, repair = 0, returned = 0;
 
         DataBaseConnection dataBase = new DataBaseConnection();
         SqlCommand command = new SqlCommand();
@@ -34,27 +34,29 @@ namespace Shubin
         private void LoadInventoryMovement()
         {
             dataBase.openConnection();
-            int i = 0;
             DGV_InventoryMovement.Rows.Clear();
             command = new SqlCommand($"SELECT * FROM InventoryMovement", dataBase.getConnection());
             DR = command.ExecuteReader();
 
             while (DR.Read())
             {
-                i++;
-                DGV_InventoryMovement.Rows.Add(i, DR[2].ToString(), DR[3].ToString(), DR[6].ToString(), DR[1].ToString(), DR[4].ToString(), DR[5].ToString());
+                DGV_InventoryMovement.Rows.Add(DR[0].ToString(), DR[2].ToString(), DR[3].ToString(), DR[6].ToString(), DR[5].ToString(), DR[4].ToString());
 
                 if (DR[6].ToString() == "Одобрено")
                 {
                     approved++;
                 }
-                else if (DR[6].ToString() == "Отклонено")
+                if (DR[6].ToString() == "Отклонено")
                 {
                     rejected++;
                 }
-                else if (DR[6].ToString() == "Починка")
+                if (DR[6].ToString() == "Починка")
                 {
                     repair++;
+                }
+                if (DR[6].ToString() == "Возвращен")
+                {
+                    returned++;
                 }
             }
             DR.Close();
@@ -75,6 +77,11 @@ namespace Shubin
             {
                 chart1.Series[0].Points.AddXY("Починено", repair);
             }
+            if (returned > 0)
+            {
+                chart1.Series[0].Points.AddXY("Возвращен", returned);
+            }
+
         }
 
         private void outdocButton_Click(object sender, EventArgs e)
@@ -98,7 +105,7 @@ namespace Shubin
             wordparagraph.Range.Font.Bold = 1;
             wordparagraph.Range.Font.Italic = 0;
             Word.Range wordrange = wordparagraph.Range;
-            Word.Table wordtable1 = document.Tables.Add(wordrange, 4, 2);
+            Word.Table wordtable1 = document.Tables.Add(wordrange, 5, 2);
             wordtable1.Range.Font.Size = 14;
             wordtable1.Range.Font.Name = "Arial";
             wordtable1.Range.Font.Bold = 1;
@@ -110,10 +117,12 @@ namespace Shubin
             wordtable1.Cell(1, 2).Range.Text = approved.ToString();
             wordtable1.Cell(2, 1).Range.Text = "Отклонено";
             wordtable1.Cell(2, 2).Range.Text = rejected.ToString();
-            wordtable1.Cell(3, 1).Range.Text = "Починки";
-            wordtable1.Cell(3, 2).Range.Text = repair.ToString();
-            wordtable1.Cell(4, 1).Range.Text = "Итого:";
-            wordtable1.Cell(4, 2).Range.Text = (approved + rejected + repair).ToString();
+            wordtable1.Cell(3, 1).Range.Text = "Возвращено";
+            wordtable1.Cell(3, 2).Range.Text = returned.ToString();
+            wordtable1.Cell(4, 1).Range.Text = "Починено";
+            wordtable1.Cell(4, 2).Range.Text = repair.ToString();
+            wordtable1.Cell(5, 1).Range.Text = "Итого:";
+            wordtable1.Cell(5, 2).Range.Text = (approved + rejected + returned + repair).ToString();
             //Открыть созданный документ
             application.Visible = true;
         }
