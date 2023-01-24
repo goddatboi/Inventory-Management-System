@@ -54,7 +54,6 @@ namespace Shubin
             SqlCommand command = new SqlCommand(querystring, dataBase.getConnection());
 
             dataBase.openConnection();
-            int rowsAffected = command.ExecuteNonQuery();
 
             if (checkUser() == false)
             {
