@@ -30,9 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manage_Supplier));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.innmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.addresstextBox = new System.Windows.Forms.TextBox();
+            this.emailtextBox = new System.Windows.Forms.TextBox();
+            this.phonemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.famtextBox = new System.Windows.Forms.TextBox();
+            this.idtextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.clearbutton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.updatebutton = new System.Windows.Forms.Button();
@@ -41,13 +48,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.idtextBox = new System.Windows.Forms.TextBox();
-            this.famtextBox = new System.Windows.Forms.TextBox();
-            this.phonemaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.emailtextBox = new System.Windows.Forms.TextBox();
-            this.addresstextBox = new System.Windows.Forms.TextBox();
-            this.clearbutton = new System.Windows.Forms.Button();
-            this.innmaskedTextBox = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,52 @@
             this.panel2.Size = new System.Drawing.Size(365, 286);
             this.panel2.TabIndex = 112;
             // 
+            // innmaskedTextBox
+            // 
+            this.innmaskedTextBox.Location = new System.Drawing.Point(137, 198);
+            this.innmaskedTextBox.Mask = "0000000000";
+            this.innmaskedTextBox.Name = "innmaskedTextBox";
+            this.innmaskedTextBox.Size = new System.Drawing.Size(206, 20);
+            this.innmaskedTextBox.TabIndex = 116;
+            this.innmaskedTextBox.ValidatingType = typeof(int);
+            // 
+            // addresstextBox
+            // 
+            this.addresstextBox.Location = new System.Drawing.Point(137, 161);
+            this.addresstextBox.Name = "addresstextBox";
+            this.addresstextBox.Size = new System.Drawing.Size(206, 20);
+            this.addresstextBox.TabIndex = 115;
+            // 
+            // emailtextBox
+            // 
+            this.emailtextBox.Location = new System.Drawing.Point(137, 126);
+            this.emailtextBox.Name = "emailtextBox";
+            this.emailtextBox.Size = new System.Drawing.Size(206, 20);
+            this.emailtextBox.TabIndex = 114;
+            // 
+            // phonemaskedTextBox
+            // 
+            this.phonemaskedTextBox.Location = new System.Drawing.Point(137, 90);
+            this.phonemaskedTextBox.Mask = "+7(999) 000-0000";
+            this.phonemaskedTextBox.Name = "phonemaskedTextBox";
+            this.phonemaskedTextBox.Size = new System.Drawing.Size(206, 20);
+            this.phonemaskedTextBox.TabIndex = 113;
+            // 
+            // famtextBox
+            // 
+            this.famtextBox.Location = new System.Drawing.Point(137, 53);
+            this.famtextBox.Name = "famtextBox";
+            this.famtextBox.Size = new System.Drawing.Size(206, 20);
+            this.famtextBox.TabIndex = 112;
+            // 
+            // idtextBox
+            // 
+            this.idtextBox.Location = new System.Drawing.Point(100, 16);
+            this.idtextBox.Name = "idtextBox";
+            this.idtextBox.Size = new System.Drawing.Size(28, 20);
+            this.idtextBox.TabIndex = 111;
+            this.idtextBox.Visible = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -104,6 +150,19 @@
             this.label2.Size = new System.Drawing.Size(39, 16);
             this.label2.TabIndex = 90;
             this.label2.Text = "Имя:";
+            // 
+            // clearbutton
+            // 
+            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
+            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
+            this.clearbutton.Location = new System.Drawing.Point(21, 235);
+            this.clearbutton.Name = "clearbutton";
+            this.clearbutton.Size = new System.Drawing.Size(42, 39);
+            this.clearbutton.TabIndex = 107;
+            this.clearbutton.UseVisualStyleBackColor = false;
+            this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
             // 
             // label3
             // 
@@ -192,64 +251,6 @@
             this.label9.Size = new System.Drawing.Size(314, 23);
             this.label9.TabIndex = 69;
             this.label9.Text = "Управление поставщиками";
-            // 
-            // idtextBox
-            // 
-            this.idtextBox.Location = new System.Drawing.Point(100, 16);
-            this.idtextBox.Name = "idtextBox";
-            this.idtextBox.Size = new System.Drawing.Size(28, 20);
-            this.idtextBox.TabIndex = 111;
-            // 
-            // famtextBox
-            // 
-            this.famtextBox.Location = new System.Drawing.Point(137, 53);
-            this.famtextBox.Name = "famtextBox";
-            this.famtextBox.Size = new System.Drawing.Size(206, 20);
-            this.famtextBox.TabIndex = 112;
-            // 
-            // phonemaskedTextBox
-            // 
-            this.phonemaskedTextBox.Location = new System.Drawing.Point(137, 90);
-            this.phonemaskedTextBox.Mask = "+7(999) 000-0000";
-            this.phonemaskedTextBox.Name = "phonemaskedTextBox";
-            this.phonemaskedTextBox.Size = new System.Drawing.Size(206, 20);
-            this.phonemaskedTextBox.TabIndex = 113;
-            // 
-            // emailtextBox
-            // 
-            this.emailtextBox.Location = new System.Drawing.Point(137, 126);
-            this.emailtextBox.Name = "emailtextBox";
-            this.emailtextBox.Size = new System.Drawing.Size(206, 20);
-            this.emailtextBox.TabIndex = 114;
-            // 
-            // addresstextBox
-            // 
-            this.addresstextBox.Location = new System.Drawing.Point(137, 161);
-            this.addresstextBox.Name = "addresstextBox";
-            this.addresstextBox.Size = new System.Drawing.Size(206, 20);
-            this.addresstextBox.TabIndex = 115;
-            // 
-            // clearbutton
-            // 
-            this.clearbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(170)))), ((int)(((byte)(0)))));
-            this.clearbutton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearbutton.Image = global::Shubin.Properties.Resources.icons8_broom_30;
-            this.clearbutton.Location = new System.Drawing.Point(21, 235);
-            this.clearbutton.Name = "clearbutton";
-            this.clearbutton.Size = new System.Drawing.Size(42, 39);
-            this.clearbutton.TabIndex = 107;
-            this.clearbutton.UseVisualStyleBackColor = false;
-            this.clearbutton.Click += new System.EventHandler(this.clearbutton_Click);
-            // 
-            // innmaskedTextBox
-            // 
-            this.innmaskedTextBox.Location = new System.Drawing.Point(137, 198);
-            this.innmaskedTextBox.Mask = "0000000000";
-            this.innmaskedTextBox.Name = "innmaskedTextBox";
-            this.innmaskedTextBox.Size = new System.Drawing.Size(206, 20);
-            this.innmaskedTextBox.TabIndex = 116;
-            this.innmaskedTextBox.ValidatingType = typeof(int);
             // 
             // Manage_Supplier
             // 

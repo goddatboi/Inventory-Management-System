@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistics));
             this.userMain_Panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.DGV_InventoryMovement = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.Move_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Move_Inv_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Move_Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Move_Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.outdocButton = new Shubin.WorkerButton();
             this.userMain_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_InventoryMovement)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.outdocButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,15 +62,24 @@
             this.userMain_Panel.Size = new System.Drawing.Size(865, 432);
             this.userMain_Panel.TabIndex = 74;
             // 
-            // label1
+            // chart1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(786, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 14);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "Экспорт";
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(292, 6);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Label = "#PERCENT";
+            series1.Legend = "Legend1";
+            series1.LegendText = "#VALX";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(567, 414);
+            this.chart1.TabIndex = 82;
+            this.chart1.Text = "chart1";
             // 
             // DGV_InventoryMovement
             // 
@@ -96,38 +105,18 @@
             this.DGV_InventoryMovement.EnableHeadersVisualStyles = false;
             this.DGV_InventoryMovement.Location = new System.Drawing.Point(0, 0);
             this.DGV_InventoryMovement.Name = "DGV_InventoryMovement";
-            this.DGV_InventoryMovement.Size = new System.Drawing.Size(378, 432);
+            this.DGV_InventoryMovement.Size = new System.Drawing.Size(286, 432);
             this.DGV_InventoryMovement.TabIndex = 6;
             // 
-            // Move_ID
+            // label1
             // 
-            this.Move_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Move_ID.HeaderText = "Код";
-            this.Move_ID.Name = "Move_ID";
-            this.Move_ID.ReadOnly = true;
-            this.Move_ID.Width = 55;
-            // 
-            // Move_Inv_Name
-            // 
-            this.Move_Inv_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Move_Inv_Name.HeaderText = "Название";
-            this.Move_Inv_Name.Name = "Move_Inv_Name";
-            this.Move_Inv_Name.Width = 93;
-            // 
-            // Move_Quantity
-            // 
-            this.Move_Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Move_Quantity.HeaderText = "Количество";
-            this.Move_Quantity.Name = "Move_Quantity";
-            this.Move_Quantity.ReadOnly = true;
-            this.Move_Quantity.Width = 106;
-            // 
-            // Move_Status
-            // 
-            this.Move_Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Move_Status.HeaderText = "Статус";
-            this.Move_Status.Name = "Move_Status";
-            this.Move_Status.Width = 73;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(786, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 14);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "Экспорт";
             // 
             // panel1
             // 
@@ -151,24 +140,36 @@
             this.label9.TabIndex = 69;
             this.label9.Text = "Статистика движения инвентаря";
             // 
-            // chart1
+            // Move_ID
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(384, 6);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Label = "#PERCENT";
-            series1.Legend = "Legend1";
-            series1.LegendText = "#VALX";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(475, 414);
-            this.chart1.TabIndex = 82;
-            this.chart1.Text = "chart1";
+            this.Move_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Move_ID.HeaderText = "Код";
+            this.Move_ID.Name = "Move_ID";
+            this.Move_ID.ReadOnly = true;
+            this.Move_ID.Width = 55;
+            // 
+            // Move_Inv_Name
+            // 
+            this.Move_Inv_Name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Move_Inv_Name.HeaderText = "Название";
+            this.Move_Inv_Name.Name = "Move_Inv_Name";
+            this.Move_Inv_Name.Width = 93;
+            // 
+            // Move_Quantity
+            // 
+            this.Move_Quantity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Move_Quantity.HeaderText = "Количество";
+            this.Move_Quantity.Name = "Move_Quantity";
+            this.Move_Quantity.ReadOnly = true;
+            this.Move_Quantity.Visible = false;
+            this.Move_Quantity.Width = 106;
+            // 
+            // Move_Status
+            // 
+            this.Move_Status.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Move_Status.HeaderText = "Статус";
+            this.Move_Status.Name = "Move_Status";
+            this.Move_Status.Width = 73;
             // 
             // outdocButton
             // 
@@ -196,10 +197,10 @@
             this.Text = "InventoryPro 2.0";
             this.Load += new System.EventHandler(this.Statistics_Load);
             this.userMain_Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_InventoryMovement)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.outdocButton)).EndInit();
             this.ResumeLayout(false);
 
@@ -211,12 +212,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridView DGV_InventoryMovement;
+        private System.Windows.Forms.Label label1;
+        private WorkerButton outdocButton;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Inv_Name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Move_Status;
-        private System.Windows.Forms.Label label1;
-        private WorkerButton outdocButton;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

@@ -54,7 +54,7 @@ namespace Shubin
             {
                 if (MessageBox.Show("Вы уверены, что хотите обновить данные поставщика", "Обновление", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    command = new SqlCommand($"UPDATE Suppliers SET Sup_Name = @Sup_Name, Sup_Fam = @Sup_Fam, Sup_Phone = @Sup_Phone, Sup_Email = @Sup_Email, Sup_Address = @Sup_Address, Sup_INN = @Sup_INN WHERE Inv_ID = '{idtextBox.Text}'", dataBase.getConnection());
+                    command = new SqlCommand($"UPDATE Suppliers SET Sup_Name = @Sup_Name, Sup_Fam = @Sup_Fam, Sup_Phone = @Sup_Phone, Sup_Email = @Sup_Email, Sup_Address = @Sup_Address, Sup_INN = @Sup_INN WHERE Sup_ID = '{idtextBox.Text}'", dataBase.getConnection());
                     command.Parameters.AddWithValue("@Sup_Name", nametextBox.Text);
                     command.Parameters.AddWithValue("@Sup_Fam", famtextBox.Text);
                     command.Parameters.AddWithValue("@Sup_Phone", phonemaskedTextBox.Text);
